@@ -9,7 +9,7 @@ package components;
  *
  * @author root
  */
-public class RutaNacional {
+public class RutaNacionalD {
     
     private String codi;
     private String aeroportOri;
@@ -37,7 +37,7 @@ public class RutaNacional {
     - Heu de tenir en compte que els aeroports no tene per què estar formats per una única 
     paraula, per exemple, El Prat.
      */
-    public static RutaNacional novaRutaNacional() {
+    public static RutaNacionalD novaRutaNacional() {
        
     }
 

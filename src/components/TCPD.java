@@ -12,7 +12,7 @@ import java.util.Date;
  *
  * @author root
  */
-public class TCP {
+public class TCPD {
 
     private String passaport;
     private String nom;
@@ -47,7 +47,7 @@ public class TCP {
     tant heu de demanar a l'usuari les hores i minuts per crear el LocalTime. En aquest
     cas es considerarà que els segons i nanosegons, sempre són  0.
      */
-    public static TCP nouTCP() {
+    public static TCPD nouTCP() {
        
     }
 

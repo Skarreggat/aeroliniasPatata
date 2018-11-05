@@ -9,7 +9,7 @@ package components;
  *
  * @author root
  */
-public class RutaIntercontinental {
+public class RutaIntercontinentalD {
 
     private String codi;
     private String aeroportOri;
@@ -41,7 +41,7 @@ public class RutaIntercontinental {
     - Heu de tenir en compte que els aeroports i països no tene per què estar formats
     per una única paraula, per exemple, El Prat i Regne Unit.
      */
-    public static RutaIntercontinental novaRutaIntercontinental() {
+    public static RutaIntercontinentalD novaRutaIntercontinental() {
 
     }
 

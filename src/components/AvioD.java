@@ -10,7 +10,7 @@ package components;
  *
  * @author root
  */
-public class Avio {
+public class AvioD {
 
     private String codi;
     private String fabricant;
@@ -43,7 +43,7 @@ public class Avio {
     formats per una única paraula, per exemple, Airbus Company o Boing 777
     Retorn: El nou avió.
      */
-    public static Avio nouAvio() {
+    public static AvioD nouAvio() {
         
     }
 
