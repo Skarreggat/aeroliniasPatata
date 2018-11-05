@@ -4,8 +4,6 @@
  */
 package components;
 
-
-
 /**
  *
  * @author root
@@ -27,13 +25,53 @@ public class AvioD {
      - Inicialitzar el vector classes com a buit i una longitud de 4.
      - Inicialitzar l'atribut possicioClasses a 0.
      */
-  
+    public AvioD(String pCodi, String pFabricant, String pModel, int pCapacitat) {
+
+        codi = pCodi;
+        fabricant = pFabricant;
+        model = pModel;
+        capacitat = pCapacitat;
+        classes = new Classe[4];
+        posicioClasses = 0;
+    }
+
 
     /*
     Mètodes accessors
      */
-
-
+    
+    public void setCodi(String pCodi){
+        codi = pCodi;
+    }
+    
+    public void setFabricant(String pFabricant){
+        fabricant = pFabricant;
+    }
+    
+    public void setModel(String pModel){
+        model = pModel;
+    }
+    
+    public void setCapacitat(int pCapacitat){
+        capacitat = pCapacitat;
+    }
+    
+    public String getCodi(){
+        return codi;
+    }
+    
+    public String getFabricant(){
+        return fabricant;
+    }
+    
+    public String getModel(){
+        return model;
+    }
+    
+    public int getCapacitat(){
+        return capacitat;
+    }
+    
     /*
     Paràmetres: cap
     Accions:
@@ -44,7 +82,7 @@ public class AvioD {
     Retorn: El nou avió.
      */
     public static AvioD nouAvio() {
-        
+
     }
 
     /*
