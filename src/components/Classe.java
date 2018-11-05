@@ -4,29 +4,44 @@
  * 
  */
 package components;
+import java.util.Scanner;
 
 
-/**
- *
- * @author root
- */
 public class Classe {
       
     private String nom;
     private int capacitat;
-    
+    private static final Scanner DADES=new Scanner(System.in);
      /*
      CONSTRUCTOR
      Paràmetres: valors per tots els atributs de la classe.
      Accions:
      - Assignar als atributs els valors passats com a paràmetres.
      */
-    
+    public Classe(String pNom,int pCapacitat){
+    nom=pNom;
+    capacitat=pCapacitat;
+}
 
     /*
     Mètodes accessors    
     */
-   
+   public void setNom(String pNom) {
+        nom = pNom;
+    }
+
+    public String getNom() {
+        return nom;
+    }
+    
+      public void setCapacitat(int pCapacitat) {
+        capacitat = pCapacitat;
+    }
+
+    public int getCapacitat() {
+        
+        return capacitat;
+    }
 
     /*
     Paràmetres: cap
@@ -38,6 +53,8 @@ public class Classe {
     Retorn: La nova classe.
      */
     public static Classe novaClasse() {
+        System.out.println("Digam el nom de la classe nova:");
+        
         
     }
 
