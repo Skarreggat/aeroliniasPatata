@@ -4,6 +4,8 @@
  */
 package components;
 
+import java.util.Scanner;
+
 /**
  *
  * @author root
@@ -16,6 +18,7 @@ public class AvioD {
     private int capacitat;
     private Classe[] classes;
     private int posicioClasses; //Atribut que controla la primera posició vuida del vector
+    private static final Scanner DADES = new Scanner(System.in);
 
     /*
      CONSTRUCTOR
@@ -82,7 +85,7 @@ public class AvioD {
     Retorn: El nou avió.
      */
     public static AvioD nouAvio() {
-
+        System.out.println("Introdueix les dades per crear l'avió.");
     }
 
     /*

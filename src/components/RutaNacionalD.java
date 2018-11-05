@@ -15,6 +15,7 @@ public class RutaNacionalD {
     private String aeroportOri;
     private String aeroportDes;
     private double distancia;
+    private String pais;
     
     /*
      CONSTRUCTOR
