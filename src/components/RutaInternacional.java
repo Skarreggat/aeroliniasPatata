@@ -4,32 +4,86 @@
  */
 package components;
 
-
 /**
  *
  * @author root
  */
 public class RutaInternacional {
-    
+
     private String codi;
     private String aeroportOri;
     private String aeroportDes;
     private String paisOri;
     private String paisDes;
     private double distancia;
-    
+
     /*
      CONSTRUCTOR
      Paràmetres: valors per tots els atributs de la classe.
      Accions:
      - Assignar als atributs els valors passats com a paràmetres.
      */
+    public RutaInternacional(String pCodi, String pAeroportOri, String pAeroportDes, String pPaisOri, String pPaisDes, double pDistancia) {
+        codi = pCodi;
+        aeroportOri = pAeroportOri;
+        aeroportDes = pAeroportDes;
+        paisOri = pPaisOri;
+        paisDes = pPaisDes;
+        distancia = pDistancia;
 
+    }
 
     /*
     Mètodes accessors
      */
-    
+    public void setCodi(String pCodi) {
+        codi = pCodi;
+    }
+
+    public void setAeroportOri(String pAeroportOri) {
+        codi = pAeroportOri;
+    }
+
+    public void setAeroportDes(String pAeroportDes) {
+        codi = pAeroportDes;
+    }
+
+    public void setPaisOri(String pPaisOri) {
+        codi = pPaisOri;
+    }
+
+    public void setPaisDes(String pPaisDes) {
+        codi = pPaisDes;
+    }
+
+    public void setDistancia(String pDistancia) {
+        codi = pDistancia;
+    }
+
+
+    public String getCodi() {
+        return codi;
+    }
+
+    public String getAeroportOri() {
+        return aeroportOri;
+    }
+
+    public String getAeroportDes() {
+        return aeroportDes;
+    }
+
+    public String getPaisOri() {
+        return paisOri;
+    }
+
+    public String getPaisDes() {
+        return paisDes;
+    }
+
+    public double getDistancia() {
+        return distancia;
+    }
 
     /*
     Paràmetres: cap
@@ -40,7 +94,7 @@ public class RutaInternacional {
     paraula, per exemple, El Prat o Regne Unit.
      */
     public static RutaInternacional novaRutaInternacional() {
-       
+
     }
 
     /*
@@ -61,7 +115,7 @@ public class RutaInternacional {
         System.out.println("\nLes dades de la ruta internacional amb codi " + codi + " són:");
         System.out.println("\nAeroport d'origen: " + aeroportOri);
         System.out.println("\nAeroport de destí: " + aeroportDes);
-         System.out.println("\nPaís d'origen: " + paisOri);
+        System.out.println("\nPaís d'origen: " + paisOri);
         System.out.println("\nPaís de destí: " + paisDes);
         System.out.println("\nDistància: " + distancia);
     }
