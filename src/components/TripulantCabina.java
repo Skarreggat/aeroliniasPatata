@@ -9,6 +9,7 @@ import java.time.LocalTime;
 import java.util.Date;
 import java.util.Scanner;
 
+
 /**
  *
  * @author root
@@ -25,6 +26,7 @@ public class TripulantCabina {
     private String rang;
     private int barres;
 
+
     /*
      CONSTRUCTOR
      Paràmetres: valors per tots els atributs de la classe menys dataAlta i barres.
@@ -33,14 +35,22 @@ public class TripulantCabina {
      - Inicialitzar l'atribut dataAlta amb l'hora actual del sistema.
      - Inicialitzar l'atribut barres mitjançant el mètode pertinent d'aquesta classe.
      */
+    public TripulantCabina(String pPassaport, String pNom, int pEdat, Date pDataAlta, LocalTime pHoresVol, String pRang, int pBarres) {
+        passaport = pPassaport;
+        nom = pNom;
+        edat = pEdat;
+        dataAlta = pDataAlta;
+        horesVol = pHoresVol;
+        rang = pRang;
+        barres = pBarres;
+
+    }
 
 
     /*
     Mètodes accessors
      */
-    
-
-    /*
+ /*
     Paràmetres: cap
     Accions:
     - Demanar a l'usuari les dades per consola per crear un nou tripulant de cabina.
@@ -61,7 +71,7 @@ public class TripulantCabina {
     Retorn: El nou tripulant de cabina.
      */
     public static TripulantCabina nouTripulantCabina() {
-        
+
     }
 
     /*

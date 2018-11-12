@@ -5,6 +5,8 @@
  */
 package components;
 
+import java.util.Scanner;
+
 /**
  *
  * @author root
@@ -20,6 +22,7 @@ public class RutaTransoceanica {
     private String continentDes;
     private String ocea;
     private double distancia;
+    private static final Scanner DADES = new Scanner(System.in);
 
     /*
      CONSTRUCTOR
@@ -43,8 +46,72 @@ public class RutaTransoceanica {
     /*
     Mètodes accessors
      */
+    public void setCodi(String pCodi) {
+        codi = pCodi;
+    }
+
+    public void setAeroportOri(String pAeroportOri) {
+        aeroportOri = pAeroportOri;
+    }
+
+    public void setAeroportDes(String pAeroportDes) {
+        aeroportDes = pAeroportDes;
+    }
+
+    public void setPaisOri(String pPaisOri) {
+        paisOri = pPaisOri;
+    }
+
+    public void setPaisDes(String pPaisDes) {
+        paisDes = pPaisDes;
+    }
+
+    public void setContinentOri(String pContinentOri) {
+        continentOri = pContinentOri;
+    }
+
+    public void setContinentDes(String pContinentDes) {
+        continentDes = pContinentDes;
+    }
+
     public void setOcea(String pOcea) {
         ocea = pOcea;
+    }
+
+    public void setDistancia(double pDistancia) {
+        distancia = pDistancia;
+    }
+
+    public String getCodi() {
+        return codi;
+    }
+
+    public String getAeroportOri() {
+        return aeroportOri;
+    }
+
+    public String getAeroportDes() {
+        return aeroportDes;
+    }
+
+    public String getPaisOri() {
+        return paisOri;
+    }
+
+    public String getPaisDes() {
+        return paisDes;
+    }
+
+    public String getContinentOri() {
+        return continentOri;
+    }
+
+    public String getContinentDes() {
+        return continentDes;
+    }
+
+    public double getDistancia() {
+        return distancia;
     }
 
     public String getOcea() {
@@ -60,7 +127,7 @@ public class RutaTransoceanica {
     per una única paraula, per exemple, El Prat i Regne Unit.
      */
     public static RutaTransoceanica novaRutaTransoceanica() {
-        
+
         System.out.println("CREACIO DE LA RUTA INTERNACIONAL!");
         System.out.println("Digam el codi de la ruta Internacional: ");
         String nom = DADES.nextLine();
@@ -72,10 +139,16 @@ public class RutaTransoceanica {
         String paisO = DADES.nextLine();
         System.out.println("Digam el Pais de Desti: ");
         String paisD = DADES.nextLine();
+        System.out.println("Digam el Continent de Origen: ");
+        String contO = DADES.nextLine();
+        System.out.println("Digam el Continent de Desti: ");
+        String contD = DADES.nextLine();
+        System.out.println("Digam L'ocea: ");
+        String pOcea = DADES.nextLine();
         System.out.println("Digam la Distancia: ");
         double dis = DADES.nextDouble();
-        
-            return new RutaTransoceanica(nom, aeroO, aeroD, paisO, paisD,contO,contD,dis);
+
+        return new RutaTransoceanica(nom, aeroO, aeroD, paisO, paisD, contO, contD, pOcea, dis);
     }
 
     /*
@@ -90,6 +163,36 @@ public class RutaTransoceanica {
      */
     public void modificarRutaTransoceanica() {
 
+        System.out.println("CREACIO DE LA RUTA INTERNACIONAL!");
+        System.out.println("Digam el codi de la ruta Internacional: ");
+        String nom = DADES.nextLine();
+        System.out.println("Digam el Aeroport d'origen: ");
+        String aeroO = DADES.nextLine();
+        System.out.println("Digam el Aeroport de Desti: ");
+        String aeroD = DADES.nextLine();
+        System.out.println("Digam el Pais d'Origen: ");
+        String paisO = DADES.nextLine();
+        System.out.println("Digam el Pais de Desti: ");
+        String paisD = DADES.nextLine();
+        System.out.println("Digam el Continent de Origen: ");
+        String contO = DADES.nextLine();
+        System.out.println("Digam el Continent de Desti: ");
+        String contD = DADES.nextLine();
+        System.out.println("Digam L'ocea: ");
+        String pOcea = DADES.nextLine();
+        System.out.println("Digam la Distancia: ");
+        double dis = DADES.nextDouble();
+        
+        codi = nom;
+        aeroportOri = aeroO;
+        aeroportDes = aeroD;
+        paisOri = paisO;
+        paisDes = paisD;
+        continentOri = contO;
+        continentDes = contD;
+        ocea = pOcea;
+        distancia = dis;
+           
     }
 
     public void mostrarRutaTransoceanica() {
