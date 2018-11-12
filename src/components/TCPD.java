@@ -7,6 +7,7 @@ package components;
 import java.text.SimpleDateFormat;
 import java.time.LocalTime;
 import java.util.Date;
+import java.util.Scanner;
 
 /**
  *
@@ -20,6 +21,7 @@ public class TCPD {
     private Date dataAlta;
     private LocalTime horesVol;
     private String rang;
+    private static final Scanner DADES = new Scanner(System.in);
 
     /*
      CONSTRUCTOR
@@ -30,6 +32,14 @@ public class TCPD {
      - Inicialitzar l'atribut rang a null, ja que quan es crea un TCP, mai té rang.
      */
     
+    public TCPD(String pPassaport, String pNom, int pEdat){
+        passaport = pPassaport;
+        nom = pNom;
+        edat = pEdat;
+        dataAlta = ;
+        horesVol = ;
+        rang = null;
+    }
 
     /*
     Mètodes accessors
