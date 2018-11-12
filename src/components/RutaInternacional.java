@@ -4,6 +4,8 @@
  */
 package components;
 
+import java.util.Scanner;
+
 /**
  *
  * @author root
@@ -16,6 +18,7 @@ public class RutaInternacional {
     private String paisOri;
     private String paisDes;
     private double distancia;
+    private static final Scanner DADES = new Scanner(System.in);
 
     /*
      CONSTRUCTOR
@@ -60,7 +63,6 @@ public class RutaInternacional {
         codi = pDistancia;
     }
 
-
     public String getCodi() {
         return codi;
     }
@@ -94,7 +96,17 @@ public class RutaInternacional {
     paraula, per exemple, El Prat o Regne Unit.
      */
     public static RutaInternacional novaRutaInternacional() {
+        System.out.println("Digam el codi de la ruta Internacional: ");
+        String nom = DADES.nextLine();
+        System.out.println("Digam el Aeroport d'origen: ");
+        String aeroO = DADES.nextLine();
+        System.out.println("Digam el Aeroport de Desti: ");
+        String aeroD = DADES.nextLine();
+                System.out.println("Digam el codi de la ruta Internacional: ");
+        String nom=DADES.nextLine();
+        
 
+        return new RutaInternacional(nom,);
     }
 
     /*
