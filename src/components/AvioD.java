@@ -42,39 +42,38 @@ public class AvioD {
     /*
     Mètodes accessors
      */
-    
-    public void setCodi(String pCodi){
+    public void setCodi(String pCodi) {
         codi = pCodi;
     }
-    
-    public void setFabricant(String pFabricant){
+
+    public void setFabricant(String pFabricant) {
         fabricant = pFabricant;
     }
-    
-    public void setModel(String pModel){
+
+    public void setModel(String pModel) {
         model = pModel;
     }
-    
-    public void setCapacitat(int pCapacitat){
+
+    public void setCapacitat(int pCapacitat) {
         capacitat = pCapacitat;
     }
-    
-    public String getCodi(){
+
+    public String getCodi() {
         return codi;
     }
-    
-    public String getFabricant(){
+
+    public String getFabricant() {
         return fabricant;
     }
-    
-    public String getModel(){
+
+    public String getModel() {
         return model;
     }
-    
-    public int getCapacitat(){
+
+    public int getCapacitat() {
         return capacitat;
     }
-    
+
     /*
     Paràmetres: cap
     Accions:
@@ -85,7 +84,17 @@ public class AvioD {
     Retorn: El nou avió.
      */
     public static AvioD nouAvio() {
-        System.out.println("Introdueix les dades per crear l'avió.");
+        System.out.println("Introdueix el codi per crear l'avió.");
+        String codi = DADES.nextLine();
+        System.out.println("Introdueix el fabricant per crear l'avió.");
+        String fabricant = DADES.nextLine();
+        System.out.println("Introdueix el model per crear l'avió.");
+        String model = DADES.nextLine();
+        System.out.println("Introdueix la capacitat per crear l'avió.");
+        int capacitat = DADES.nextInt();
+
+        return new AvioD(codi, fabricant, model, capacitat);
+
     }
 
     /*
@@ -98,7 +107,15 @@ public class AvioD {
      Retorn: cap
      */
     public void modificarAvio() {
-
+        mostrarAvio();
+        System.out.println("Introdueix el nou codi de l'avió.");
+        codi = DADES.nextLine();
+        System.out.println("Introdueix el nou fabricant de l'avió.");
+        fabricant = DADES.nextLine();
+        System.out.println("Introdueix el nou model de l'avió.");
+        model = DADES.nextLine();
+        System.out.println("Introdueix la nova capacitat de l'avió.");
+        capacitat = DADES.nextInt();
     }
 
     public void mostrarAvio() {
@@ -123,6 +140,19 @@ public class AvioD {
      Retorn: cap
      */
     public void afegirClasse() {
+        Classe algo = Classe.novaClasse();
+        int suma = algo.getCapacitat();
+        if (seleccionarClasse(algo.getNom()) == -1) {
+            for (int i = 0; i < posicioClasses; i++) {
+                suma += classes[i].getCapacitat();
+            }
+            if (suma <= capacitat) {
+                classes[posicioClasses] = algo;
+                posicioClasses++;
+            }
+        } else {
+            System.out.println("La clase no s'ha afegit");
+        }
 
     }
 
