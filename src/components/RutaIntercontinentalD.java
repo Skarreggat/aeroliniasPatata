@@ -26,12 +26,82 @@ public class RutaIntercontinentalD {
      Accions:
      - Assignar als atributs els valors passats com a paràmetres.
      */
-    
+    public RutaIntercontinentalD(String pCodi, String pAeroportOri, String pAeroportDes, String pPaisOri, String pPaisDes, String pContinentOri, String pContinentDes, double pDistancia){
+        codi = pCodi;
+        aeroportOri = pAeroportOri;
+        aeroportDes = pAeroportDes;
+        paisOri = pPaisOri;
+        paisDes = pPaisDes;
+        continentOri = pContinentOri;
+        continentDes = pContinentDes;
+        distancia = pDistancia;
+    }
     
     /*
     Mètodes accessors
     */
+    public void setCodi(String pCodi) {
+        codi = pCodi;
+    }
     
+    public void setAeroportOri(String pAeroportOri) {
+        aeroportOri = pAeroportOri;
+    }
+    
+    public void setAeroportDes(String pAeroportDes) {
+        aeroportDes = pAeroportDes;
+    }
+    
+    public void setPaisOri(String pPaisOri) {
+        paisOri = pPaisOri;
+    }
+    
+    public void setPaisDes(String pPaisDes) {
+        paisDes = pPaisDes;
+    }
+    
+    public void setContinentOri(String pContinentOri) {
+        continentOri = pContinentOri;
+    }
+    
+    public void setContinentDes(String pContinentDes) {
+        continentDes = pContinentDes;
+    }
+    
+    public void setDistancia(double pDistancia) {
+        distancia = pDistancia;
+    }
+    
+    public String getCodi() {
+        return codi;
+    }
+    
+    public String getAeroportOri() {
+        return aeroportOri;
+    }
+    
+    public String getAeroportDes() {
+        return aeroportDes;
+    }
+    
+    public String getPaisOri() {
+        return paisOri;
+    }
+    
+    public String getPaisDes() {
+        return paisDes;
+    }
+    
+    public String getContinentOri() {
+        return continentOri;
+    }
+    public String getContinentDes() {
+        return continentDes;
+    }
+    
+    public double getDistancia() {
+        return distancia;
+    }
     
    /*
     Paràmetres: cap
