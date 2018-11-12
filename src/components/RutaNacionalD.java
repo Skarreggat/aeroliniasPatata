@@ -87,15 +87,15 @@ public class RutaNacionalD {
      */
     public static RutaNacionalD novaRutaNacional() {
         System.out.println("CREACIO DE LA RUTA NACIONAL!");
-        System.out.println("Digam el codi de la ruta Nacional: ");
+        System.out.println("Introdueix el codi de la ruta Nacional: ");
         String nom = DADES.nextLine();
-        System.out.println("Digam el Aeroport d'origen: ");
+        System.out.println("Introdueix el Aeroport d'origen: ");
         String aeroO = DADES.nextLine();
-        System.out.println("Digam el Aeroport de Desti: ");
+        System.out.println("Introdueix el Aeroport de Desti: ");
         String aeroD = DADES.nextLine();
-        System.out.println("Digam la Distancia: ");
+        System.out.println("Introdueix la Distancia: ");
         double dis = DADES.nextDouble();
-        System.out.println("Digam el Pais: ");
+        System.out.println("Introdueix el Pais: ");
         String paisP = DADES.nextLine();
 
         return new RutaNacionalD(nom, aeroO, aeroD, dis, paisP);
@@ -112,16 +112,19 @@ public class RutaNacionalD {
      Retorn: cap
      */
     public void modificarRutaNacional() {
+        System.out.println("Dades Actuals a modificar: ");
+        mostrarRutaNacional();
+        System.out.println("");
         System.out.println("MODIFICACIO DE LA RUTA NACIONAL\n");
-        System.out.println("Digam el codi de la ruta Nacional: ");
+        System.out.println("Introdueix el codi de la ruta Nacional: ");
         String nom = DADES.nextLine();
-        System.out.println("Digam el Aeroport d'origen: ");
+        System.out.println("Introdueix el Aeroport d'origen: ");
         String aeroO = DADES.nextLine();
-        System.out.println("Digam el Aeroport de Desti: ");
+        System.out.println("Introdueix el Aeroport de Desti: ");
         String aeroD = DADES.nextLine();
-        System.out.println("Digam la Distancia: ");
+        System.out.println("Introdueix la Distancia: ");
         double dis = DADES.nextDouble();
-        System.out.println("Digam el Pai: ");
+        System.out.println("Introdueix el Pai: ");
         String paisP = DADES.nextLine();
         
         codi = nom;

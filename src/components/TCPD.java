@@ -31,20 +31,65 @@ public class TCPD {
      - Inicialitzar l'atribut dataAlta amb l'hora actual del sistema.
      - Inicialitzar l'atribut rang a null, ja que quan es crea un TCP, mai té rang.
      */
-    
-    public TCPD(String pPassaport, String pNom, int pEdat){
+    public TCPD(String pPassaport, String pNom, int pEdat, LocalTime pHoresVol) {
         passaport = pPassaport;
         nom = pNom;
         edat = pEdat;
-        dataAlta = ;
-        horesVol = ;
+        dataAlta = new Date();
+        horesVol = pHoresVol;
         rang = null;
     }
 
     /*
     Mètodes accessors
      */
-    
+    public void setPassaport(String pPassaport) {
+        passaport = pPassaport;
+    }
+
+    public void setNom(String pNom) {
+        nom = pNom;
+    }
+
+    public void setEdat(int pEdat) {
+        edat = pEdat;
+    }
+
+    public void setDataAlta() {
+        dataAlta = new Date();
+    }
+
+    public void setHoresVol(LocalTime pHoresVol) {
+        horesVol = pHoresVol;
+    }
+
+    public void setRang() {
+        rang = null;
+    }
+
+    public String getPassaport() {
+        return passaport;
+    }
+
+    public String getNom() {
+        return nom;
+    }
+
+    public int getEdat() {
+        return edat;
+    }
+
+    public Date getDataAlta() {
+        return dataAlta;
+    }
+
+    public LocalTime getHoresVol() {
+        return horesVol;
+    }
+
+    public String getRang() {
+        return rang;
+    }
 
     /*
     Paràmetres: cap
@@ -58,7 +103,21 @@ public class TCPD {
     cas es considerarà que els segons i nanosegons, sempre són  0.
      */
     public static TCPD nouTCP() {
-       
+        System.out.println("CREACIO DE TCP!");
+        System.out.println("Introdueix el passaport del TCP: ");
+        String pass = DADES.nextLine();
+        System.out.println("Introdueix el nom del TCP: ");
+        String nom = DADES.nextLine();
+        System.out.println("Introdueix l'edat del TCP: ");
+        int ed = DADES.nextInt();
+        System.out.println("Introdueix les hores de vol del TCP: ");
+        int hores = DADES.nextInt();
+        System.out.println("Introdueix els minuts de vol del TCP: ");
+        int minuts = DADES.nextInt();
+        
+        LocalTime.of(hores, minuts);
+        
+        return new TCPD(pass, nom, ed, LocalTime.of(hores, minuts));
     }
 
     /*
@@ -74,7 +133,25 @@ public class TCPD {
      Retorn: cap
      */
     public void modificarTCP() {
-
+        System.out.println("Dades Actuals a modificar: ");
+        mostrarTCP();
+        System.out.println("");
+        System.out.println("MODIFICACIO DEL TCP\n");
+        System.out.println("Introdueix el nou passaport del TCP: ");
+        String pass = DADES.nextLine();
+        System.out.println("Introdueix el nom del TCP: ");
+        String nomP = DADES.nextLine();
+        System.out.println("Introdueix l'edat del TCP: ");
+        int ed = DADES.nextInt();
+        System.out.println("Introdueix les hores de vol del TCP: ");
+        int hores = DADES.nextInt();
+        System.out.println("Introdueix els minuts de vol del TCP: ");
+        int minuts = DADES.nextInt();
+        
+        passaport = pass;
+        nom = nomP;
+        edat = ed;
+        horesVol = LocalTime.of(hores, minuts);
     }
 
     public void mostrarTCP() {

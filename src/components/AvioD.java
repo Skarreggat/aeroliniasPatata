@@ -84,6 +84,7 @@ public class AvioD {
     Retorn: El nou avió.
      */
     public static AvioD nouAvio() {
+        System.out.println("CREACIO DE L'AVIO!");
         System.out.println("Introdueix el codi per crear l'avió.");
         String codi = DADES.nextLine();
         System.out.println("Introdueix el fabricant per crear l'avió.");
@@ -107,7 +108,10 @@ public class AvioD {
      Retorn: cap
      */
     public void modificarAvio() {
+        System.out.println("Dades Actuals a modificar: ");
         mostrarAvio();
+        System.out.println("");
+        System.out.println("MODIFICACIO DE L'AVIO\n");
         System.out.println("Introdueix el nou codi de l'avió.");
         codi = DADES.nextLine();
         System.out.println("Introdueix el nou fabricant de l'avió.");
@@ -116,6 +120,8 @@ public class AvioD {
         model = DADES.nextLine();
         System.out.println("Introdueix la nova capacitat de l'avió.");
         capacitat = DADES.nextInt();
+        
+        
     }
 
     public void mostrarAvio() {

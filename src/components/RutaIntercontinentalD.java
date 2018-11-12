@@ -116,21 +116,21 @@ public class RutaIntercontinentalD {
      */
     public static RutaIntercontinentalD novaRutaIntercontinental() {
         System.out.println("CREACIO DE LA RUTA INTERCONTINENTAL!");
-        System.out.println("Digam el codi de la ruta Intercontinental: ");
+        System.out.println("Introdueix el codi de la ruta Intercontinental: ");
         String nom = DADES.nextLine();
-        System.out.println("Digam el Aeroport d'origen: ");
+        System.out.println("Introdueix el Aeroport d'origen: ");
         String aeroO = DADES.nextLine();
-        System.out.println("Digam el Aeroport de Desti: ");
+        System.out.println("Introdueix el Aeroport de Desti: ");
         String aeroD = DADES.nextLine();
-        System.out.println("Digam el Pais d'Origen: ");
+        System.out.println("Introdueix el Pais d'Origen: ");
         String paisO = DADES.nextLine();
-        System.out.println("Digam el Pais de Desti: ");
+        System.out.println("Introdueix el Pais de Desti: ");
         String paisD = DADES.nextLine();
-        System.out.println("Digam el Continent d'Origen: ");
+        System.out.println("Introdueix el Continent d'Origen: ");
         String contO = DADES.nextLine();
-        System.out.println("Digam el Continent de Desti: ");
+        System.out.println("Introdueix el Continent de Desti: ");
         String contD = DADES.nextLine();
-        System.out.println("Digam la Distancia: ");
+        System.out.println("Introdueix la Distancia: ");
         double dis = DADES.nextDouble();
 
         return new RutaIntercontinentalD(nom, aeroO, aeroD, paisO, paisD, contO, contD, dis);
@@ -147,32 +147,26 @@ public class RutaIntercontinentalD {
      Retorn: cap
      */
     public void modificarRutaIntercontinental() {
+        System.out.println("Dades Actuals a modificar: ");
+        mostrarRutaIntercontinental();
+        System.out.println("");
         System.out.println("MODIFICACIO DE LA RUTA INTERCONTINENTAL\n");
-        System.out.println("Digam el codi de la ruta Intercontinental: ");
-        String nom = DADES.nextLine();
-        System.out.println("Digam el Aeroport d'origen: ");
-        String aeroO = DADES.nextLine();
-        System.out.println("Digam el Aeroport de Desti: ");
-        String aeroD = DADES.nextLine();
-        System.out.println("Digam el Pais d'Origen: ");
-        String paisO = DADES.nextLine();
-        System.out.println("Digam el Pais de Desti: ");
-        String paisD = DADES.nextLine();
-        System.out.println("Digam el Continent d'Origen: ");
-        String contO = DADES.nextLine();
-        System.out.println("Digam el Continent de Desti: ");
-        String contD = DADES.nextLine();
-        System.out.println("Digam la Distancia: ");
-        double dis = DADES.nextDouble();
-        
-        codi = nom;
-        aeroportOri = aeroO;
-        aeroportDes = aeroD;
-        paisOri = paisO;
-        paisDes = paisD;
-        continentOri = contO;
-        continentDes = contD;
-        distancia = dis;
+        System.out.println("Introdueix el codi de la ruta Intercontinental: ");
+        codi = DADES.nextLine();
+        System.out.println("Introdueix el Aeroport d'origen: ");
+        aeroportOri = DADES.nextLine();
+        System.out.println("Introdueix el Aeroport de Desti: ");
+        aeroportDes = DADES.nextLine();
+        System.out.println("Introdueix el Pais d'Origen: ");
+        paisOri = DADES.nextLine();
+        System.out.println("Introdueix el Pais de Desti: ");
+        paisDes = DADES.nextLine();
+        System.out.println("Introdueix el Continent d'Origen: ");
+        continentOri = DADES.nextLine();
+        System.out.println("Introdueix el Continent de Desti: ");
+        continentDes = DADES.nextLine();
+        System.out.println("Introdueix la Distancia: ");
+        distancia = DADES.nextDouble();
     }
 
     public void mostrarRutaIntercontinental() {

@@ -124,25 +124,22 @@ public class RutaInternacional {
      Retorn: cap
      */
     public void modificarRutaInternacional() {
+        System.out.println("Dades Actuals a modificar: ");
+        mostrarRutaInternacional();
+        System.out.println("");
         System.out.println("MODIFICACIO DE LA RUTA INTERNACIONAL\n");
         System.out.println("Digam el codi de la ruta Internacional: ");
-        String nom = DADES.nextLine();
+        codi = DADES.nextLine();
         System.out.println("Digam el Aeroport d'origen: ");
-        String aeroO = DADES.nextLine();
+        aeroportOri = DADES.nextLine();
         System.out.println("Digam el Aeroport de Desti: ");
-        String aeroD = DADES.nextLine();
+        aeroportDes = DADES.nextLine();
         System.out.println("Digam el Pais d'Origen: ");
-        String paisO = DADES.nextLine();
+        paisOri = DADES.nextLine();
         System.out.println("Digam el Pais de Desti: ");
-        String paisD = DADES.nextLine();
+        paisDes = DADES.nextLine();
         System.out.println("Digam la Distancia: ");
-        double dis = DADES.nextDouble();
-        codi = nom;
-        aeroportOri = aeroO;
-        aeroportDes = aeroD;
-        paisOri = paisO;
-        paisDes = paisD;
-        distancia = dis;
+        distancia = DADES.nextDouble();
 
     }
 
