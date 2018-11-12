@@ -27,14 +27,31 @@ public class RutaTransoceanica {
      Accions:
      - Assignar als atributs els valors passats com a paràmetres.
      */
-    
-    
+    public RutaTransoceanica(String pCodi, String pAeroportOri, String pAeroportDes, String pPaisOri, String pPaisDes, String pContinentOri, String pContinentDes, String pOcea, double pDistancia) {
+        codi = pCodi;
+        aeroportOri = pAeroportOri;
+        aeroportDes = pAeroportDes;
+        paisOri = pPaisOri;
+        paisDes = pPaisDes;
+        continentOri = pContinentOri;
+        continentDes = pContinentDes;
+        ocea = pOcea;
+        distancia = pDistancia;
+
+    }
+
     /*
     Mètodes accessors
-    */
-    
-    
-   /*
+     */
+    public void setOcea(String pOcea) {
+        ocea = pOcea;
+    }
+
+    public String getOcea() {
+        return ocea;
+    }
+
+    /*
     Paràmetres: cap
     Accions:
     - Demanar a l'usuari les dades per consola per crear una nova ruta transcoceanica.
@@ -43,7 +60,22 @@ public class RutaTransoceanica {
     per una única paraula, per exemple, El Prat i Regne Unit.
      */
     public static RutaTransoceanica novaRutaTransoceanica() {
-
+        
+        System.out.println("CREACIO DE LA RUTA INTERNACIONAL!");
+        System.out.println("Digam el codi de la ruta Internacional: ");
+        String nom = DADES.nextLine();
+        System.out.println("Digam el Aeroport d'origen: ");
+        String aeroO = DADES.nextLine();
+        System.out.println("Digam el Aeroport de Desti: ");
+        String aeroD = DADES.nextLine();
+        System.out.println("Digam el Pais d'Origen: ");
+        String paisO = DADES.nextLine();
+        System.out.println("Digam el Pais de Desti: ");
+        String paisD = DADES.nextLine();
+        System.out.println("Digam la Distancia: ");
+        double dis = DADES.nextDouble();
+        
+            return new RutaTransoceanica(nom, aeroO, aeroD, paisO, paisD,contO,contD,dis);
     }
 
     /*
@@ -72,4 +104,3 @@ public class RutaTransoceanica {
         System.out.println("\nDistància: " + distancia);
     }
 }
-

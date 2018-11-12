@@ -96,17 +96,21 @@ public class RutaInternacional {
     paraula, per exemple, El Prat o Regne Unit.
      */
     public static RutaInternacional novaRutaInternacional() {
+        System.out.println("CREACIO DE LA RUTA INTERNACIONAL!");
         System.out.println("Digam el codi de la ruta Internacional: ");
         String nom = DADES.nextLine();
         System.out.println("Digam el Aeroport d'origen: ");
         String aeroO = DADES.nextLine();
         System.out.println("Digam el Aeroport de Desti: ");
         String aeroD = DADES.nextLine();
-                System.out.println("Digam el codi de la ruta Internacional: ");
-        String nom=DADES.nextLine();
-        
+        System.out.println("Digam el Pais d'Origen: ");
+        String paisO = DADES.nextLine();
+        System.out.println("Digam el Pais de Desti: ");
+        String paisD = DADES.nextLine();
+        System.out.println("Digam la Distancia: ");
+        double dis = DADES.nextDouble();
 
-        return new RutaInternacional(nom,);
+        return new RutaInternacional(nom, aeroO, aeroD, paisO, paisD,dis);
     }
 
     /*
@@ -120,6 +124,25 @@ public class RutaInternacional {
      Retorn: cap
      */
     public void modificarRutaInternacional() {
+        System.out.println("MODIFICACIO DE LA RUTA INTERNACIONAL\n");
+        System.out.println("Digam el codi de la ruta Internacional: ");
+        String nom = DADES.nextLine();
+        System.out.println("Digam el Aeroport d'origen: ");
+        String aeroO = DADES.nextLine();
+        System.out.println("Digam el Aeroport de Desti: ");
+        String aeroD = DADES.nextLine();
+        System.out.println("Digam el Pais d'Origen: ");
+        String paisO = DADES.nextLine();
+        System.out.println("Digam el Pais de Desti: ");
+        String paisD = DADES.nextLine();
+        System.out.println("Digam la Distancia: ");
+        double dis = DADES.nextDouble();
+        codi = nom;
+        aeroportOri = aeroO;
+        aeroportDes = aeroD;
+        paisOri = paisO;
+        paisDes = paisD;
+        distancia = dis;
 
     }
 
