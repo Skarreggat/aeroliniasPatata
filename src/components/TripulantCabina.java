@@ -41,7 +41,7 @@ public class TripulantCabina {
         dataAlta = new Date();
         horesVol = pHoresVol;
         rang = pRang;
-        assignarBarres(pRang);
+        assignarBarres(rang);
 
     }
 

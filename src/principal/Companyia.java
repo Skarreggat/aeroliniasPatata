@@ -13,6 +13,7 @@ import components.RutaTransoceanica;
 import components.TCP;
 import components.TripulantCabina;
 import java.text.ParseException;
+import java.util.Scanner;
 
 /**
  *
@@ -20,6 +21,7 @@ import java.text.ParseException;
  */
 public class Companyia {
 
+    private final static Scanner DADES = new Scanner(System.in);
     private int codi;
     private static int properCodi = 1; //El proper codi a assignar
     private String nom;
@@ -71,6 +73,7 @@ public class Companyia {
         tripulantsCabina = new TripulantCabina[600];
         tcps = new TCP[1000];
         vols = new Vol[700];
+        posicioAvions = 0;
         posicioRutesNacionals = 0;
         posicioRutesInternacionals = 0;
         posicioRutesIntercontinentals = 0;
@@ -88,85 +91,152 @@ public class Companyia {
         nom = pNom;
     }
 
+    public String getNom() {
+        return nom;
+    }
+
     public void setCodi(int pCodi) {
         codi = pCodi;
+    }
+
+    public int getCodi() {
+        return codi;
+    }
+
+    public void setProperCodi(int pProperCodi) {
+        properCodi = pProperCodi;
+    }
+
+    public int getProperCodi() {
+        return properCodi;
     }
 
     public void setAvions(Avio[] pAvions) {
         avions = pAvions;
     }
 
+    public Avio[] getAvions() {
+        return avions;
+    }
+
+    public void setPosicioAvions(int pPosicioAvions) {
+        posicioAvions = pPosicioAvions;
+    }
+
+    public int getPosicioAvions() {
+        return posicioAvions;
+    }
+
     public void setRutesNacionals(RutaNacional[] pRutesNacionals) {
         rutesNacionals = pRutesNacionals;
+    }
+
+    public RutaNacional[] getRutesNacionals() {
+        return rutesNacionals;
     }
 
     public void setRutesrutesInternacionals(RutaInternacional[] pRutesInternacionals) {
         rutesInternacionals = pRutesInternacionals;
     }
 
+    public RutaInternacional[] getRutesInternacionals() {
+        return rutesInternacionals;
+    }
+
     public void setRutesIntercontinentals(RutaIntercontinental[] pRutesIntercontinentals) {
         rutesIntercontinentals = pRutesIntercontinentals;
+    }
+
+    public RutaIntercontinental[] getRutesIntercontinentals() {
+        return rutesIntercontinentals;
     }
 
     public void setRutesTransoceaniques(RutaTransoceanica[] pRutesTransoceaniques) {
         rutesTransoceaniques = pRutesTransoceaniques;
     }
 
+    public RutaTransoceanica[] getRutesTransoceaniques() {
+        return rutesTransoceaniques;
+    }
+
     public void setTripulantsCabina(TripulantCabina[] pTripulantsCabina) {
         tripulantsCabina = pTripulantsCabina;
     }
 
-    public int getPosicioRutesNacionals(){
+    public TripulantCabina[] getTripulantsCabina() {
+        return tripulantsCabina;
+    }
+
+    public void setTcps(TCP[] pTcps) {
+        tcps = pTcps;
+    }
+
+    public TCP[] getTcps() {
+        return tcps;
+    }
+
+    public void setVols(Vol[] pVols) {
+        vols = pVols;
+    }
+
+    public Vol[] getVol() {
+        return vols;
+    }
+
+    public int getPosicioRutesNacionals() {
         return posicioRutesNacionals;
     }
-    public void setPosicioRutesNacionals(int pPosicioRutesNacionals){
-        this.posicioRutesNacionals = pPosicioRutesNacionals;
+
+    public void setPosicioRutesNacionals(int pPosicioRutesNacionals) {
+        posicioRutesNacionals = pPosicioRutesNacionals;
     }
-    public int getPosicioRutesInternacionals(){
+
+    public int getPosicioRutesInternacionals() {
         return posicioRutesInternacionals;
     }
-    public void setPosicioRutesInternacionals(int pPosicioRutesInternacionals){
-        this.posicioRutesInternacionals = pPosicioRutesInternacionals;
+
+    public void setPosicioRutesInternacionals(int pPosicioRutesInternacionals) {
+        posicioRutesInternacionals = pPosicioRutesInternacionals;
     }
-    public int getPosicioRutesIntercontinentals(){
+
+    public int getPosicioRutesIntercontinentals() {
         return posicioRutesIntercontinentals;
     }
-    public void setPosicioRutesIntercontinentals(int pPosicioRutesIntercontinentals){
-        this.posicioRutesIntercontinentals = pPosicioRutesIntercontinentals;
+
+    public void setPosicioRutesIntercontinentals(int pPosicioRutesIntercontinentals) {
+        posicioRutesIntercontinentals = pPosicioRutesIntercontinentals;
     }
-    public int getPosicioRutesTransoceaniques(){
+
+    public int getPosicioRutesTransoceaniques() {
         return posicioRutesTransoceaniques;
     }
-    public void setPosicioRutesTransoceaniques(int pPosicioRutesTransoceaniques){
-        this.posicioRutesTransoceaniques = pPosicioRutesTransoceaniques;
+
+    public void setPosicioRutesTransoceaniques(int pPosicioRutesTransoceaniques) {
+        posicioRutesTransoceaniques = pPosicioRutesTransoceaniques;
     }
-    public int getPosicioTripulantsCabina(){
+
+    public int getPosicioTripulantsCabina() {
         return posicioTripulantsCabina;
     }
-    public void setPosicioTripulantsCabina(int pPosicioTripulantsCabina){
-        this.posicioTripulantsCabina = pPosicioTripulantsCabina;
+
+    public void setPosicioTripulantsCabina(int pPosicioTripulantsCabina) {
+        posicioTripulantsCabina = pPosicioTripulantsCabina;
     }
-    public int getPosicioTcps(){
+
+    public int getPosicioTcps() {
         return posicioTcps;
     }
-    public void setPosicioTcps(int pPosicioTcps){
-        this.posicioTcps = pPosicioTcps;
+
+    public void setPosicioTcps(int pPosicioTcps) {
+        posicioTcps = pPosicioTcps;
     }
-    public int getPosicioVols(){
+
+    public int getPosicioVols() {
         return posicioVols;
     }
-    public void setPosicioVols(int pPosicioVols){
-        this.posicioVols = pPosicioVols;
-    }
-    
-    
 
-    public int getCodi() {
-        return codi;
-    }
-
-    public String getNom() {
-        return nom;
+    public void setPosicioVols(int pPosicioVols) {
+        posicioVols = pPosicioVols;
     }
 
     /*
@@ -180,6 +250,17 @@ public class Companyia {
      */
     public static Companyia novaCompanyia() {
         System.out.println("");
+        String pNom;
+
+        //DADES PER FE LA COMPAÑIA
+        System.out.println("Nova companyia");
+        System.out.println("Introdueix el nom de la companyia: ");
+        pNom = DADES.nextLine();
+
+        //instanciem una nova companyia
+        Companyia novaCompanyia = new Companyia(pNom);
+
+        return novaCompanyia;
 
     }
 
@@ -195,6 +276,20 @@ public class Companyia {
      Retorn: cap
      */
     public void modificarCompanyia() {
+        String pNom;
+
+        //Mostrem les dades de la companyia abans de la modificacio
+        System.out.println("Modificacio de la companyia");
+        System.out.println("\nDades actuals de la companyia:");
+        mostrarCompanyia();
+
+        //demanem les dades a l'usuari i les assignem a variables
+        System.out.println("Modificacio de la companyia");
+        System.out.println("Introdueix el nom de la companyia: ");
+        pNom = DADES.nextLine();
+
+        //instanciem una nova companyia
+        setNom(pNom);
 
     }
 
@@ -216,6 +311,8 @@ public class Companyia {
      */
     public void afegirAvio() {
 
+        avions[posicioAvions] = Avio.nouAvio();
+        posicioAvions++;
     }
 
     public int seleccionarAvio() {
@@ -247,6 +344,9 @@ public class Companyia {
      */
     public void afegirRutaNacional() {
 
+        rutesNacionals[posicioRutesNacionals] = RutaNacional.novaRutaNacional();
+        posicioRutesNacionals++;
+
     }
 
     public int seleccionarRutaNacional() {
@@ -277,7 +377,8 @@ public class Companyia {
      Retorn: cap
      */
     public void afegirRutaInternacional() {
-
+        rutesInternacionals[posicioRutesInternacionals] = RutaInternacional.novaRutaInternacional();
+        posicioRutesInternacionals++;
     }
 
     public int seleccionarRutaInternacional() {
@@ -308,7 +409,8 @@ public class Companyia {
      Retorn: cap
      */
     public void afegirRutaIntercontinental() {
-
+        rutesIntercontinentals[posicioRutesIntercontinentals] = RutaIntercontinental.novaRutaIntercontinental();
+        posicioRutesIntercontinentals++;
     }
 
     public int seleccionarRutaIntercontinental() {
@@ -339,7 +441,8 @@ public class Companyia {
      Retorn: cap
      */
     public void afegirRutaTransoceanica() {
-
+        rutesTransoceaniques[posicioRutesTransoceaniques] = RutaTransoceanica.novaRutaTransoceanica();
+        posicioRutesTransoceaniques++;
     }
 
     public int seleccionarRutaTransoceanica() {
@@ -371,7 +474,8 @@ public class Companyia {
      Retorn: cap
      */
     public void afegirTripulantCabina() {
-
+        tripulantsCabina[posicioTripulantsCabina] = TripulantCabina.nouTripulantCabina();
+        posicioTripulantsCabina++;
     }
 
     public int seleccionarTripulantCabina() {
@@ -402,7 +506,8 @@ public class Companyia {
      Retorn: cap
      */
     public void afegirTCP() {
-
+        tcps[posicioTcps] = TCP.nouTCP();
+        posicioTcps++;
     }
 
     public int seleccionarTCP() {
@@ -433,7 +538,8 @@ public class Companyia {
      Retorn: cap
      */
     public void afegirVol() throws ParseException {
-
+        vols[posicioVols] = Vol.nouVol();
+        posicioVols++;
     }
 
     public int seleccionarVol() {
@@ -465,7 +571,17 @@ public class Companyia {
      Retorn: cap
      */
     public void afegirAvioVol() {
-
+        Vol vol = vols[seleccionarVol()];
+        if (vol != null) {
+            Avio avio = avions[seleccionarAvio()];
+            if (avio != null) {
+                vol.setAvio(avio);
+            } else {
+                System.out.println("\nNo existeix aquest avió");
+            }
+        } else {
+            System.out.println("\nNo existeix aquest vol");
+        }
     }
 
     /*
@@ -483,7 +599,17 @@ public class Companyia {
      Retorn: cap
      */
     public void afegirTripulantCabinaVol() {
-
+        Vol vol = vols[seleccionarVol()];
+        if (vol != null) {
+            TripulantCabina tc=tripulantsCabina[posicioTripulantsCabina];
+            if (tc != null) {
+                vol.afegirTripulantCabina(tc);
+            } else {
+                System.out.println("\nNo existeix aquest tripulant de cabina");
+            }
+        } else {
+            System.out.println("\nNo existeix aquest vol");
+        }
     }
 
     /*
@@ -499,7 +625,17 @@ public class Companyia {
      Retorn: cap
      */
     public void afegirTCPVol() {
-
+        Vol vol = vols[seleccionarVol()];
+        if (vol != null) {
+            TripulantCabina tc=tripulantsCabina[posicioTripulantsCabina];
+            if (tc != null) {
+                vol.afegirTripulantCabina(tc);
+            } else {
+                System.out.println("\nNo existeix aquest tripulant de cabina");
+            }
+        } else {
+            System.out.println("\nNo existeix aquest vol");
+        }
     }
 
     /*
