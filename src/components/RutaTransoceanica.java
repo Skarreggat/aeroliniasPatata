@@ -163,36 +163,32 @@ public class RutaTransoceanica {
      */
     public void modificarRutaTransoceanica() {
 
+        System.out.println("DADES ACTUALS A MODIFICAR: \n");
+        mostrarRutaTransoceanica();
+        System.out.println("");
         System.out.println("CREACIO DE LA RUTA INTERNACIONAL!");
+
         System.out.println("Digam el codi de la ruta Internacional: ");
-        String nom = DADES.nextLine();
+        codi = DADES.nextLine();
         System.out.println("Digam el Aeroport d'origen: ");
-        String aeroO = DADES.nextLine();
+        aeroportOri = DADES.nextLine();
         System.out.println("Digam el Aeroport de Desti: ");
-        String aeroD = DADES.nextLine();
+        aeroportDes = DADES.nextLine();
         System.out.println("Digam el Pais d'Origen: ");
-        String paisO = DADES.nextLine();
+        paisOri = DADES.nextLine();
         System.out.println("Digam el Pais de Desti: ");
-        String paisD = DADES.nextLine();
+        paisDes = DADES.nextLine();
         System.out.println("Digam el Continent de Origen: ");
-        String contO = DADES.nextLine();
+        continentOri = DADES.nextLine();
         System.out.println("Digam el Continent de Desti: ");
-        String contD = DADES.nextLine();
+        continentDes = DADES.nextLine();
         System.out.println("Digam L'ocea: ");
-        String pOcea = DADES.nextLine();
+        ocea = DADES.nextLine();
         System.out.println("Digam la Distancia: ");
-        double dis = DADES.nextDouble();
-        
-        codi = nom;
-        aeroportOri = aeroO;
-        aeroportDes = aeroD;
-        paisOri = paisO;
-        paisDes = paisD;
-        continentOri = contO;
-        continentDes = contD;
-        ocea = pOcea;
-        distancia = dis;
-           
+        distancia = DADES.nextDouble();
+
+
+
     }
 
     public void mostrarRutaTransoceanica() {

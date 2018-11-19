@@ -13,7 +13,7 @@ import java.util.Scanner;
  *
  * @author root
  */
-public class TCPD {
+public class TCP {
 
     private String passaport;
     private String nom;
@@ -31,7 +31,7 @@ public class TCPD {
      - Inicialitzar l'atribut dataAlta amb l'hora actual del sistema.
      - Inicialitzar l'atribut rang a null, ja que quan es crea un TCP, mai té rang.
      */
-    public TCPD(String pPassaport, String pNom, int pEdat, LocalTime pHoresVol) {
+    public TCP(String pPassaport, String pNom, int pEdat, LocalTime pHoresVol) {
         passaport = pPassaport;
         nom = pNom;
         edat = pEdat;
@@ -102,7 +102,7 @@ public class TCPD {
     tant heu de demanar a l'usuari les hores i minuts per crear el LocalTime. En aquest
     cas es considerarà que els segons i nanosegons, sempre són  0.
      */
-    public static TCPD nouTCP() {
+    public static TCP nouTCP() {
         System.out.println("CREACIO DE TCP!");
         System.out.println("Introdueix el passaport del TCP: ");
         String pass = DADES.nextLine();
@@ -117,7 +117,7 @@ public class TCPD {
         
         LocalTime.of(hores, minuts);
         
-        return new TCPD(pass, nom, ed, LocalTime.of(hores, minuts));
+        return new TCP(pass, nom, ed, LocalTime.of(hores, minuts));
     }
 
     /*

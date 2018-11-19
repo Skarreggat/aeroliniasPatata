@@ -10,7 +10,7 @@ import java.util.Scanner;
  *
  * @author root
  */
-public class AvioD {
+public class Avio {
 
     private String codi;
     private String fabricant;
@@ -28,7 +28,7 @@ public class AvioD {
      - Inicialitzar el vector classes com a buit i una longitud de 4.
      - Inicialitzar l'atribut possicioClasses a 0.
      */
-    public AvioD(String pCodi, String pFabricant, String pModel, int pCapacitat) {
+    public Avio(String pCodi, String pFabricant, String pModel, int pCapacitat) {
 
         codi = pCodi;
         fabricant = pFabricant;
@@ -83,7 +83,7 @@ public class AvioD {
     formats per una única paraula, per exemple, Airbus Company o Boing 777
     Retorn: El nou avió.
      */
-    public static AvioD nouAvio() {
+    public static Avio nouAvio() {
         System.out.println("CREACIO DE L'AVIO!");
         System.out.println("Introdueix el codi per crear l'avió.");
         String codi = DADES.nextLine();
@@ -94,7 +94,7 @@ public class AvioD {
         System.out.println("Introdueix la capacitat per crear l'avió.");
         int capacitat = DADES.nextInt();
 
-        return new AvioD(codi, fabricant, model, capacitat);
+        return new Avio(codi, fabricant, model, capacitat);
 
     }
 

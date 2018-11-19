@@ -11,7 +11,7 @@ import java.util.Scanner;
  *
  * @author root
  */
-public class RutaIntercontinentalD {
+public class RutaIntercontinental {
 
     private String codi;
     private String aeroportOri;
@@ -29,7 +29,7 @@ public class RutaIntercontinentalD {
      Accions:
      - Assignar als atributs els valors passats com a paràmetres.
      */
-    public RutaIntercontinentalD(String pCodi, String pAeroportOri, String pAeroportDes, String pPaisOri, String pPaisDes, String pContinentOri, String pContinentDes, double pDistancia){
+    public RutaIntercontinental(String pCodi, String pAeroportOri, String pAeroportDes, String pPaisOri, String pPaisDes, String pContinentOri, String pContinentDes, double pDistancia){
         codi = pCodi;
         aeroportOri = pAeroportOri;
         aeroportDes = pAeroportDes;
@@ -114,7 +114,7 @@ public class RutaIntercontinentalD {
     - Heu de tenir en compte que els aeroports i països no tene per què estar formats
     per una única paraula, per exemple, El Prat i Regne Unit.
      */
-    public static RutaIntercontinentalD novaRutaIntercontinental() {
+    public static RutaIntercontinental novaRutaIntercontinental() {
         System.out.println("CREACIO DE LA RUTA INTERCONTINENTAL!");
         System.out.println("Introdueix el codi de la ruta Intercontinental: ");
         String nom = DADES.nextLine();
@@ -133,7 +133,7 @@ public class RutaIntercontinentalD {
         System.out.println("Introdueix la Distancia: ");
         double dis = DADES.nextDouble();
 
-        return new RutaIntercontinentalD(nom, aeroO, aeroD, paisO, paisD, contO, contD, dis);
+        return new RutaIntercontinental(nom, aeroO, aeroD, paisO, paisD, contO, contD, dis);
     }
 
     /*

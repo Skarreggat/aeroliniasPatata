@@ -10,7 +10,7 @@ import java.util.Scanner;
  *
  * @author root
  */
-public class RutaNacionalD {
+public class RutaNacional {
 
     private String codi;
     private String aeroportOri;
@@ -25,7 +25,7 @@ public class RutaNacionalD {
      Accions:
      - Assignar als atributs els valors passats com a paràmetres.
      */
-    public RutaNacionalD(String pCodi, String pAeroportOri, String pAeroportDes, double pDistancia, String pPais) {
+    public RutaNacional(String pCodi, String pAeroportOri, String pAeroportDes, double pDistancia, String pPais) {
 
         codi = pCodi;
         aeroportOri = pAeroportOri;
@@ -85,7 +85,7 @@ public class RutaNacionalD {
     - Heu de tenir en compte que els aeroports no tene per què estar formats per una única 
     paraula, per exemple, El Prat.
      */
-    public static RutaNacionalD novaRutaNacional() {
+    public static RutaNacional novaRutaNacional() {
         System.out.println("CREACIO DE LA RUTA NACIONAL!");
         System.out.println("Introdueix el codi de la ruta Nacional: ");
         String nom = DADES.nextLine();
@@ -98,7 +98,7 @@ public class RutaNacionalD {
         System.out.println("Introdueix el Pais: ");
         String paisP = DADES.nextLine();
 
-        return new RutaNacionalD(nom, aeroO, aeroD, dis, paisP);
+        return new RutaNacional(nom, aeroO, aeroD, dis, paisP);
     }
 
     /*

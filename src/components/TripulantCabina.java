@@ -9,7 +9,6 @@ import java.time.LocalTime;
 import java.util.Date;
 import java.util.Scanner;
 
-
 /**
  *
  * @author root
@@ -35,14 +34,14 @@ public class TripulantCabina {
      - Inicialitzar l'atribut dataAlta amb l'hora actual del sistema.
      - Inicialitzar l'atribut barres mitjançant el mètode pertinent d'aquesta classe.
      */
-    public TripulantCabina(String pPassaport, String pNom, int pEdat, Date pDataAlta, LocalTime pHoresVol, String pRang, int pBarres) {
+    public TripulantCabina(String pPassaport, String pNom, int pEdat, LocalTime pHoresVol, String pRang) {
         passaport = pPassaport;
         nom = pNom;
         edat = pEdat;
-        dataAlta = pDataAlta;
+        dataAlta = new Date();
         horesVol = pHoresVol;
         rang = pRang;
-        barres = pBarres;
+        assignarBarres(pRang);
 
     }
 
@@ -50,7 +49,63 @@ public class TripulantCabina {
     /*
     Mètodes accessors
      */
- /*
+    public void setPassaport(String pPassaport) {
+        passaport = pPassaport;
+    }
+
+    public void setNom(String pNom) {
+        nom = pNom;
+    }
+
+    public void setEdat(int pEdat) {
+        edat = pEdat;
+    }
+
+    public void setDataAlta(LocalTime pHoresVol) {
+        horesVol = pHoresVol;
+    }
+
+    public void setHoresVol() {
+        dataAlta = new Date();
+    }
+
+    public void setBarres(int pBarres) {
+        barres = pBarres;
+    }
+
+    public void setRang(String pRang) {
+        rang = pRang;
+    }
+
+    public String getPassaport() {
+        return passaport;
+    }
+
+    public String getNom() {
+        return nom;
+    }
+
+    public int getEdat() {
+        return edat;
+    }
+
+    public Date getDataAlta() {
+        return dataAlta;
+    }
+
+    public LocalTime getHoresVol() {
+        return horesVol;
+    }
+
+    public String getRang() {
+        return rang;
+    }
+
+    public int getBarres() {
+        return barres;
+    }
+
+    /*
     Paràmetres: cap
     Accions:
     - Demanar a l'usuari les dades per consola per crear un nou tripulant de cabina.
@@ -71,6 +126,42 @@ public class TripulantCabina {
     Retorn: El nou tripulant de cabina.
      */
     public static TripulantCabina nouTripulantCabina() {
+
+        System.out.println("CREACIO DE NOU TRIPULANT\n");
+        System.out.println("Introdueix el Passaport: ");
+        String pass = DADES.nextLine();
+        System.out.println("Introdueix el nom: ");
+        String pNom = DADES.nextLine();
+        System.out.println("Introdueix l'edat: ");
+        int pedat = DADES.nextInt();
+
+        System.out.println("Introdueix les Hores de vol: ");
+        int hores = DADES.nextInt();
+        System.out.println("Introdueix els minuts de vol: ");
+        int minuts = DADES.nextInt();
+
+        DADES.nextLine();
+
+        System.out.println("Introdueix el rang(CP/C/EV): ");
+        String Rang = DADES.next();
+        String pRang = "";
+        switch (Rang) {
+            case "C":
+                pRang = "Comandant";
+                break;
+            case "CP":
+                pRang = "Copilot";
+                break;
+            case "EV":
+                pRang = "Enginyer de vol";
+                break;
+
+            default:
+                System.out.println("El rang introduït no és correcte");
+
+        }
+
+        return new TripulantCabina(pass, pNom, pedat, LocalTime.of(hores, minuts), pRang);
 
     }
 
@@ -100,6 +191,57 @@ public class TripulantCabina {
      */
     public void modificarTripulantCabina() {
 
+        System.out.println("DADES ACTUALS A MODIFICAR: \n");
+        mostrarTripulantCabina();
+        System.out.println("");
+        System.out.println("CREACIO DE NOU TRIPULANT\n");
+
+        System.out.println("Introdueix el Passaport: ");
+        passaport = DADES.nextLine();
+        System.out.println("Introdueix el nom: ");
+        nom = DADES.nextLine();
+        System.out.println("Introdueix l'edat: ");
+        edat = DADES.nextInt();
+
+        System.out.println("Introdueix les Hores de vol: ");
+        int hores = DADES.nextInt();
+        System.out.println("Introdueix els minuts de vol: ");
+        int minuts = DADES.nextInt();
+
+        horesVol = LocalTime.of(hores, minuts);
+
+        System.out.println("Introdueix el rang(CP/C/EV): ");
+        String Rang = DADES.next();
+
+        switch (Rang) {
+            case "C":
+                if (this.rang.equals("Copilot")) {
+                    if ((((hores * 3600) + (minuts * 60)) * 3) < (157788000 * 3)) {
+                        rang = "Comandant";
+                        assignarBarres(rang);
+                    }
+                }
+                break;
+            case "CP":
+                if (this.rang.equals("Enginyer de vol")) {
+                    if (((hores * 3600) + (minuts * 60)) < 157788000) {
+                        rang = "Copilot";
+                        assignarBarres(rang);
+                    }
+                }
+                break;
+            case "EV":
+
+                rang = "Enginyer de vol";
+                assignarBarres(rang);
+
+                break;
+
+            default:
+                System.out.println("El rang introduït no és correcte");
+
+        }
+
     }
 
     public void mostrarTripulantCabina() {
@@ -122,6 +264,24 @@ public class TripulantCabina {
      Retorn: número de barres
      */
     public void assignarBarres(String pRang) {
+
+        switch (pRang) {
+            case "Comandant":
+                barres = 4;
+                break;
+            case "Copilot":
+                if (horesVol.getHour() < 1500) {
+                    barres = 2;
+                } else {
+                    barres = 3;
+                }
+                break;
+            case "Enginyer de vol":
+                barres = 1;
+                break;
+            default:
+                barres = 0;
+        }
 
     }
 

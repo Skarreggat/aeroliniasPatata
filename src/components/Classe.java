@@ -58,9 +58,9 @@ public class Classe {
         System.out.println("Digam el nom de la classe:");
         String clas = DADES.nextLine();
         System.out.println("Digam la seva capacitat");
-        int capacitat = DADES.nextInt();
+        int pCapacitat = DADES.nextInt();
 
-        return new Classe(clas, capacitat);
+        return new Classe(clas, pCapacitat);
     }
 
     /*
