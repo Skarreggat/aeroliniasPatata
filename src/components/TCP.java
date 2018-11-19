@@ -4,6 +4,7 @@
  */
 package components;
 
+import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.time.LocalTime;
 import java.util.Date;
@@ -63,8 +64,8 @@ public class TCP {
         horesVol = pHoresVol;
     }
 
-    public void setRang() {
-        rang = null;
+    public void setRang(String pRang) {
+        rang = pRang;
     }
 
     public String getPassaport() {
@@ -102,7 +103,7 @@ public class TCP {
     tant heu de demanar a l'usuari les hores i minuts per crear el LocalTime. En aquest
     cas es considerarà que els segons i nanosegons, sempre són  0.
      */
-    public static TCP nouTCP() {
+    public static TCP nouTCP(){
         System.out.println("CREACIO DE TCP!");
         System.out.println("Introdueix el passaport del TCP: ");
         String pass = DADES.nextLine();
@@ -114,6 +115,7 @@ public class TCP {
         int hores = DADES.nextInt();
         System.out.println("Introdueix els minuts de vol del TCP: ");
         int minuts = DADES.nextInt();
+        
         
         LocalTime.of(hores, minuts);
         
@@ -132,7 +134,7 @@ public class TCP {
     
      Retorn: cap
      */
-    public void modificarTCP() {
+    public void modificarTCP()throws ParseException {
         System.out.println("Dades Actuals a modificar: ");
         mostrarTCP();
         System.out.println("");
@@ -147,11 +149,14 @@ public class TCP {
         int hores = DADES.nextInt();
         System.out.println("Introdueix els minuts de vol del TCP: ");
         int minuts = DADES.nextInt();
+        System.out.println("Introdueix la data d'alta del TCP:(dd-MM-yyyy)");
+        Date daataAlta = new SimpleDateFormat("hh:mm:ss a dd-MM-yyyy").parse(new Scanner(System.in).nextLine());
         
         passaport = pass;
         nom = nomP;
         edat = ed;
         horesVol = LocalTime.of(hores, minuts);
+        dataAlta = daataAlta;
     }
 
     public void mostrarTCP() {

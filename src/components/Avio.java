@@ -57,6 +57,14 @@ public class Avio {
     public void setCapacitat(int pCapacitat) {
         capacitat = pCapacitat;
     }
+    
+    public void setClasses(Classe[] pClasses) {
+        classes = pClasses;
+    }
+    
+    public void setPosicioClasses(int pPosicioClasses) {
+        posicioClasses = pPosicioClasses;
+    }
 
     public String getCodi() {
         return codi;
@@ -72,6 +80,14 @@ public class Avio {
 
     public int getCapacitat() {
         return capacitat;
+    }
+    
+    public Classe[] getClasses() {
+        return classes;
+    }
+    
+    public int getPosicioClasses() {
+        return posicioClasses;
     }
 
     /*
