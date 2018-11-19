@@ -656,7 +656,14 @@ public class Companyia {
      Retorn: cap
      */
     public void afegirRutaVol(int tipus) {
-
+        Vol vol = vols[seleccionarVol()];
+        if (vol != null) {
+            switch(tipus){
+            case
+        }
+         
+        }
+        
     }
 
 }
