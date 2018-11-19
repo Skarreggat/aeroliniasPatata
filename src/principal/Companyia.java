@@ -59,13 +59,116 @@ public class Companyia {
        posicioTripulantsCabina, posicioTcps i posicioVols, s'han d'inicialitzar a 0, què serà la primera posició
        buida dels vectors inicilitzats.
      */
-    
-    
+    public Companyia(String pNom) {
+        nom = pNom;
+        codi = properCodi;
+        properCodi++;
+        avions = new Avio[200];
+        rutesNacionals = new RutaNacional[100];
+        rutesInternacionals = new RutaInternacional[200];
+        rutesIntercontinentals = new RutaIntercontinental[100];
+        rutesTransoceaniques = new RutaTransoceanica[45];
+        tripulantsCabina = new TripulantCabina[600];
+        tcps = new TCP[1000];
+        vols = new Vol[700];
+        posicioRutesNacionals = 0;
+        posicioRutesInternacionals = 0;
+        posicioRutesIntercontinentals = 0;
+        posicioRutesTransoceaniques = 0;
+        posicioTripulantsCabina = 0;
+        posicioTcps = 0;
+        posicioVols = 0;
+
+    }
+
     /*
      Mètodes accessors    
      */
+    public void setNom(String pNom) {
+        nom = pNom;
+    }
 
+    public void setCodi(int pCodi) {
+        codi = pCodi;
+    }
+
+    public void setAvions(Avio[] pAvions) {
+        avions = pAvions;
+    }
+
+    public void setRutesNacionals(RutaNacional[] pRutesNacionals) {
+        rutesNacionals = pRutesNacionals;
+    }
+
+    public void setRutesrutesInternacionals(RutaInternacional[] pRutesInternacionals) {
+        rutesInternacionals = pRutesInternacionals;
+    }
+
+    public void setRutesIntercontinentals(RutaIntercontinental[] pRutesIntercontinentals) {
+        rutesIntercontinentals = pRutesIntercontinentals;
+    }
+
+    public void setRutesTransoceaniques(RutaTransoceanica[] pRutesTransoceaniques) {
+        rutesTransoceaniques = pRutesTransoceaniques;
+    }
+
+    public void setTripulantsCabina(TripulantCabina[] pTripulantsCabina) {
+        tripulantsCabina = pTripulantsCabina;
+    }
+
+    public int getPosicioRutesNacionals(){
+        return posicioRutesNacionals;
+    }
+    public void setPosicioRutesNacionals(int pPosicioRutesNacionals){
+        this.posicioRutesNacionals = pPosicioRutesNacionals;
+    }
+    public int getPosicioRutesInternacionals(){
+        return posicioRutesInternacionals;
+    }
+    public void setPosicioRutesInternacionals(int pPosicioRutesInternacionals){
+        this.posicioRutesInternacionals = pPosicioRutesInternacionals;
+    }
+    public int getPosicioRutesIntercontinentals(){
+        return posicioRutesIntercontinentals;
+    }
+    public void setPosicioRutesIntercontinentals(int pPosicioRutesIntercontinentals){
+        this.posicioRutesIntercontinentals = pPosicioRutesIntercontinentals;
+    }
+    public int getPosicioRutesTransoceaniques(){
+        return posicioRutesTransoceaniques;
+    }
+    public void setPosicioRutesTransoceaniques(int pPosicioRutesTransoceaniques){
+        this.posicioRutesTransoceaniques = pPosicioRutesTransoceaniques;
+    }
+    public int getPosicioTripulantsCabina(){
+        return posicioTripulantsCabina;
+    }
+    public void setPosicioTripulantsCabina(int pPosicioTripulantsCabina){
+        this.posicioTripulantsCabina = pPosicioTripulantsCabina;
+    }
+    public int getPosicioTcps(){
+        return posicioTcps;
+    }
+    public void setPosicioTcps(int pPosicioTcps){
+        this.posicioTcps = pPosicioTcps;
+    }
+    public int getPosicioVols(){
+        return posicioVols;
+    }
+    public void setPosicioVols(int pPosicioVols){
+        this.posicioVols = pPosicioVols;
+    }
     
+    
+
+    public int getCodi() {
+        return codi;
+    }
+
+    public String getNom() {
+        return nom;
+    }
+
     /*
      Paràmetres: cap
      Accions:
@@ -76,6 +179,7 @@ public class Companyia {
      Retorn: La nova companyia.
      */
     public static Companyia novaCompanyia() {
+        System.out.println("");
 
     }
 
@@ -381,7 +485,7 @@ public class Companyia {
     public void afegirTripulantCabinaVol() {
 
     }
-    
+
     /*
      Paràmetres: cap
      Accions:
@@ -395,7 +499,7 @@ public class Companyia {
      Retorn: cap
      */
     public void afegirTCPVol() {
-  
+
     }
 
     /*
@@ -416,7 +520,7 @@ public class Companyia {
      Retorn: cap
      */
     public void afegirRutaVol(int tipus) {
-    
+
     }
 
 }
