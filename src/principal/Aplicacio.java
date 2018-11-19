@@ -5,6 +5,7 @@
 package principal;
 
 import java.text.ParseException;
+import java.util.Scanner;
 
 /**
  *
@@ -12,6 +13,7 @@ import java.text.ParseException;
  */
 public class Aplicacio {
 
+    private final static Scanner DADES = new Scanner(System.in);
     private static Companyia[] companyies = new Companyia[5];
     private static int posicioCompanyies = 0; //La propera posició buida del vector companyies
     private static Companyia companyiaActual = null; //Companyia seleccionada
@@ -177,7 +179,60 @@ public class Aplicacio {
      tècnica de les excepcions que veurem més endavant
      */
     public static void menuAvions() {
-       
+        int opcio = 0;
+
+        do {
+            int pos = -1;
+            System.out.println("\nSelecciona una opció");
+            System.out.println("\n0. Sortir");
+            System.out.println("\n1. Alta");
+            System.out.println("\n2. Modificar");
+            System.out.println("\n3. LListar Avions");
+
+            opcio = DADES.nextInt();
+
+            switch (opcio) {
+                case 0:
+                    break;
+                case 1:
+                    pos = selectCompanyia();
+                    if (pos >= 0) {
+                        companyiaActual = companyies[pos];
+                        companyiaActual.afegirAvio();
+                    } else {
+                        System.out.println("\nNo existeix aquesta companyia");
+                    }
+                    
+                    break;
+                case 2:
+                    pos = selectCompanyia();
+                    if (pos >= 0) {
+                        companyiaActual = companyies[pos];
+                        =companyiaActual.seleccionarAvio();
+                    } else {
+                        System.out.println("\nNo existeix aquesta companyia");
+                    }
+                    
+                    break;
+                case 3:
+                    pos = selectCompanyia();
+                    if (pos >= 0) {
+                        companyies[pos].modificarCompanyia();
+                    } else {
+                        System.out.println("\nNo existeix aquesta companyia");
+                    }
+                    break;
+                case 4:
+                    for (int i = 0; i < posicioCompanyies; i++) {
+                        companyies[i].mostrarCompanyia();
+                    }
+                    break;
+                default:
+                    System.out.println("\nS'ha de seleccionar una opció correcta del menú.");
+                    break;
+            }
+        } while (opcio != 0);
+
     }
 
     /*
@@ -201,7 +256,7 @@ public class Aplicacio {
      tècnica de les excepcions que veurem més endavant
      */
     public static void menuRutesNacionals() {
-    
+
     }
 
     /*
@@ -225,7 +280,7 @@ public class Aplicacio {
      tècnica de les excepcions que veurem més endavant
      */
     public static void menuRutesInternacionals() {
-        
+
     }
 
     /*
@@ -249,7 +304,7 @@ public class Aplicacio {
      tècnica de les excepcions que veurem més endavant
      */
     public static void menuRutesIntercontinentals() {
-       
+
     }
 
     /*
@@ -273,7 +328,7 @@ public class Aplicacio {
      tècnica de les excepcions que veurem més endavant
      */
     public static void menuRutesTransoceaniques() {
-       
+
     }
 
     /*
@@ -297,7 +352,7 @@ public class Aplicacio {
      tècnica de les excepcions que veurem més endavant
      */
     public static void menuTripulantsCabina() {
-        
+
     }
 
     /*
@@ -321,7 +376,7 @@ public class Aplicacio {
      tècnica de les excepcions que veurem més endavant
      */
     public static void menuTcps() {
-        
+
     }
 
     /*
@@ -355,7 +410,7 @@ public class Aplicacio {
      tècnica de les excepcions que veurem més endavant
      */
     public static void menuVols() throws ParseException {
-        
+
     }
 
     public static Integer selectCompanyia() {
