@@ -601,7 +601,7 @@ public class Companyia {
     public void afegirTripulantCabinaVol() {
         Vol vol = vols[seleccionarVol()];
         if (vol != null) {
-            TripulantCabina tc=tripulantsCabina[posicioTripulantsCabina];
+            TripulantCabina tc = tripulantsCabina[posicioTripulantsCabina];
             if (tc != null) {
                 vol.afegirTripulantCabina(tc);
             } else {
@@ -627,7 +627,7 @@ public class Companyia {
     public void afegirTCPVol() {
         Vol vol = vols[seleccionarVol()];
         if (vol != null) {
-            TripulantCabina tc=tripulantsCabina[posicioTripulantsCabina];
+            TripulantCabina tc = tripulantsCabina[posicioTripulantsCabina];
             if (tc != null) {
                 vol.afegirTripulantCabina(tc);
             } else {
@@ -658,12 +658,24 @@ public class Companyia {
     public void afegirRutaVol(int tipus) {
         Vol vol = vols[seleccionarVol()];
         if (vol != null) {
-            switch(tipus){
-            case
+            switch (tipus) {
+                case 1:
+                    vol.setRuta(RutaNacional.novaRutaNacional());
+                    break;
+                case 2:
+                    vol.setRuta(RutaInternacional.novaRutaInternacional());
+                    break;
+                case 3:
+                    vol.setRuta(RutaIntercontinental.novaRutaIntercontinental());
+                    break;
+                case 4:
+                    vol.setRuta(RutaIntercontinental.novaRutaIntercontinental());
+                    break;
+                default:
+                    System.out.println("\nNo existeix aquesta ruta");
+            }
+
         }
-         
-        }
-        
     }
 
 }
