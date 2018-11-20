@@ -597,6 +597,76 @@ public class Aplicacio {
      tècnica de les excepcions que veurem més endavant
      */
     public static void menuVols() throws ParseException {
+        int opcio = 0;
+
+        do {
+            System.out.println("\nSelecciona una opció");
+            System.out.println("\n0. Sortir");
+            System.out.println("\n1. Alta Vols");
+            System.out.println("\n2. Modificar Vols");
+            System.out.println("\n3. Afegir avió al Vol");
+            System.out.println("\n4. Afegir ruta al Vol");
+            System.out.println("\n5. Afegir tripulan de cabina al Vol");
+            System.out.println("\n6. Afegir tripulan de cabina de passatgers al Vol");
+            System.out.println("\n7. Llistar vols");
+
+
+            opcio = DADES.nextInt();
+
+            switch (opcio) {
+                case 0:
+                    break;
+                case 1:
+                    menuCompaniyes();
+                    break;
+                case 2:
+                    if (companyiaActual != null) {
+                        menuAvions();
+                    } else {
+                        System.out.println("\nPrimer s'ha de seleccionar la companyia en el menú de companyes");
+                    }
+                    break;
+                case 3:
+                    if (companyiaActual != null) {
+                        menuRutesNacionals();
+                    } else {
+                        System.out.println("\nPrimer s'ha de seleccionar la companyia en el menú de companyes");
+                    }
+                    break;
+                case 4:
+                    if (companyiaActual != null) {
+                        menuRutesInternacionals();
+                    } else {
+                        System.out.println("\nPrimer s'ha de seleccionar la companyia en el menú de companyes");
+                    }
+                    break;
+                case 5:
+                    if (companyiaActual != null) {
+                        menuRutesIntercontinentals();
+                    } else {
+                        System.out.println("\nPrimer s'ha de seleccionar la companyia en el menú de companyes");
+                    }
+                    break;
+                case 6:
+                    if (companyiaActual != null) {
+                        menuRutesTransoceaniques();
+                    } else {
+                        System.out.println("\nPrimer s'ha de seleccionar la companyia en el menú de companyes");
+                    }
+                    break;
+                case 7:
+                    if (companyiaActual != null) {
+                        menuTripulantsCabina();
+                    } else {
+                        System.out.println("\nPrimer s'ha de seleccionar la companyia en el menú de companyes");
+                    }
+                    break;
+
+                default:
+                    System.out.println("\nS'ha de seleccionar una opció correcta del menú.");
+                    break;
+            }
+        } while (opcio != 0);
         
 
     }
