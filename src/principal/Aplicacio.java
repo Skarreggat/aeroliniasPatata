@@ -36,7 +36,7 @@ public class Aplicacio {
             System.out.println("\n6. Gestió de rutes transoceàniques");
             System.out.println("\n7. Gestió de tripulants de cabina");
             System.out.println("\n8. Gestió de tripulants de cabina de passatgers");
-            System.out.println("\n8. Gestió de vols");
+            System.out.println("\n9. Gestió de vols");
 
             opcio = DADES.nextInt();
 
