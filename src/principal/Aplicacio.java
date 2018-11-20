@@ -355,6 +355,41 @@ public class Aplicacio {
      */
     public static void menuRutesIntercontinentals() {
 
+         int opcio = 0;
+
+        do {
+            int pos = -1;
+            System.out.println("\nSelecciona una opció");
+            System.out.println("\n0. Sortir");
+            System.out.println("\n1. Alta");
+            System.out.println("\n2. Modificar");
+            System.out.println("\n3. Llistar rutes intercontinentals");
+
+            opcio = DADES.nextInt();
+
+            switch (opcio) {
+                case 0:
+                    break;
+                case 1:
+                    companyiaActual.afegirRutaIntercontinental();
+                    break;
+                case 2:
+                    int posicio = companyiaActual.seleccionarRutaIntercontinental();
+                    if(posicio != -1){
+                        companyiaActual.getRutesIntercontinentals()[posicio].modificarRutaIntercontinental();
+                    }
+                    break;
+                case 3:
+                    for (int i = 0; i < companyiaActual.getPosicioRutesIntercontinentals(); i++) {
+                        companyiaActual.getRutesIntercontinentals()[i].mostrarRutaIntercontinental();
+                    }
+                    break;
+                default:
+                    System.out.println("\nS'ha de seleccionar una opció correcta del menú.");
+                    break;
+            }
+        } while (opcio != 0);
+    
     }
 
     /*
@@ -435,6 +470,42 @@ public class Aplicacio {
      tècnica de les excepcions que veurem més endavant
      */
     public static void menuTripulantsCabina() {
+        
+        
+         int opcio = 0;
+
+        do {
+            int pos = -1;
+            System.out.println("\nSelecciona una opció");
+            System.out.println("\n0. Sortir");
+            System.out.println("\n1. Alta");
+            System.out.println("\n2. Modificar");
+            System.out.println("\n3. Llistar tripulants de cabina");
+
+            opcio = DADES.nextInt();
+
+            switch (opcio) {
+                case 0:
+                    break;
+                case 1:
+                    companyiaActual.afegirTripulantCabina();
+                    break;
+                case 2:
+                    int posicio = companyiaActual.seleccionarTripulantCabina();
+                    if(posicio != -1){
+                        companyiaActual.getTripulantsCabina()[posicio].modificarTripulantCabina();
+                    }
+                    break;
+                case 3:
+                    for (int i = 0; i < companyiaActual.getPosicioTripulantsCabina(); i++) {
+                        companyiaActual.getTripulantsCabina()[i].mostrarTripulantCabina();
+                    }
+                    break;
+                default:
+                    System.out.println("\nS'ha de seleccionar una opció correcta del menú.");
+                    break;
+            }
+        } while (opcio != 0);
 
     }
 
@@ -526,6 +597,7 @@ public class Aplicacio {
      tècnica de les excepcions que veurem més endavant
      */
     public static void menuVols() throws ParseException {
+        
 
     }
 
