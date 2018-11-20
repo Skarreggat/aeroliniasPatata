@@ -243,7 +243,40 @@ public class Aplicacio {
      tècnica de les excepcions que veurem més endavant
      */
     public static void menuRutesNacionals() {
+        int opcio = 0;
 
+        do {
+            int pos = -1;
+            System.out.println("\nSelecciona una opció");
+            System.out.println("\n0. Sortir");
+            System.out.println("\n1. Alta");
+            System.out.println("\n2. Modificar");
+            System.out.println("\n3. LListar rutes nacionals");
+
+            opcio = DADES.nextInt();
+
+            switch (opcio) {
+                case 0:
+                    break;
+                case 1:
+                    companyiaActual.afegirRutaNacional();
+                    break;
+                case 2:
+                    int posicio = companyiaActual.seleccionarRutaNacional();
+                    if(posicio > -1){
+                        companyiaActual.getRutesNacionals()[posicio].modificarRutaNacional();
+                    }
+                    break;
+                case 3:
+                    for (int i = 0; i < companyiaActual.getPosicioRutesNacionals(); i++) {
+                        companyiaActual.getRutesNacionals()[i].mostrarRutaNacional();
+                    }
+                    break;
+                default:
+                    System.out.println("\nS'ha de seleccionar una opció correcta del menú.");
+                    break;
+            }
+        } while (opcio != 0);
     }
 
     /*
