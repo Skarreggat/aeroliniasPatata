@@ -44,7 +44,7 @@ public class Aplicacio {
                 case 0:
                     break;
                 case 1:
-                    menuCompanyes();
+                    menuCompaniyes();
                     break;
                 case 2:
                     if (companyiaActual != null) {
@@ -109,7 +109,7 @@ public class Aplicacio {
         } while (opcio != 0);
     }
 
-    public static void menuCompanyes() {
+    public static void menuCompaniyes() {
         int opcio = 0;
 
         do {
@@ -195,24 +195,11 @@ public class Aplicacio {
                 case 0:
                     break;
                 case 1:
-                    pos = selectCompanyia();
-                    if (pos >= 0) {
-                        companyiaActual = companyies[pos];
-                        companyiaActual.afegirAvio();
-                    } else {
-                        System.out.println("\nNo existeix aquesta companyia");
-                    }
-                    
+                    companyiaActual.afegirAvio();
                     break;
                 case 2:
-                    pos = selectCompanyia();
-                    if (pos >= 0) {
-                        companyiaActual = companyies[pos];
-                        =companyiaActual.seleccionarAvio();
-                    } else {
-                        System.out.println("\nNo existeix aquesta companyia");
-                    }
-                    
+                        companyiaActual.seleccionarAvio();
+
                     break;
                 case 3:
                     pos = selectCompanyia();
