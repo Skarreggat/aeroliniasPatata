@@ -260,7 +260,7 @@ public class Aplicacio {
                     break;
                 case 2:
                     int posicio = companyiaActual.seleccionarRutaNacional();
-                    if(posicio > -1){
+                    if(posicio != -1){
                         companyiaActual.getRutesNacionals()[posicio].modificarRutaNacional();
                     }
                     break;
