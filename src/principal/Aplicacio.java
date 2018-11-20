@@ -297,7 +297,40 @@ public class Aplicacio {
      tècnica de les excepcions que veurem més endavant
      */
     public static void menuRutesInternacionals() {
+        int opcio = 0;
 
+        do {
+            int pos = -1;
+            System.out.println("\nSelecciona una opció");
+            System.out.println("\n0. Sortir");
+            System.out.println("\n1. Alta");
+            System.out.println("\n2. Modificar");
+            System.out.println("\n3. LListar rutes internacionals");
+
+            opcio = DADES.nextInt();
+
+            switch (opcio) {
+                case 0:
+                    break;
+                case 1:
+                    companyiaActual.afegirRutaInternacional();
+                    break;
+                case 2:
+                    int posicio = companyiaActual.seleccionarRutaInternacional();
+                    if(posicio != -1){
+                        companyiaActual.getRutesInternacionals()[posicio].modificarRutaInternacional();
+                    }
+                    break;
+                case 3:
+                    for (int i = 0; i < companyiaActual.getPosicioRutesInternacionals(); i++) {
+                        companyiaActual.getRutesInternacionals()[i].mostrarRutaInternacional();
+                    }
+                    break;
+                default:
+                    System.out.println("\nS'ha de seleccionar una opció correcta del menú.");
+                    break;
+            }
+        } while (opcio != 0);
     }
 
     /*
@@ -345,7 +378,40 @@ public class Aplicacio {
      tècnica de les excepcions que veurem més endavant
      */
     public static void menuRutesTransoceaniques() {
+        int opcio = 0;
 
+        do {
+            int pos = -1;
+            System.out.println("\nSelecciona una opció");
+            System.out.println("\n0. Sortir");
+            System.out.println("\n1. Alta");
+            System.out.println("\n2. Modificar");
+            System.out.println("\n3. LListar rutes transoceàniques");
+
+            opcio = DADES.nextInt();
+
+            switch (opcio) {
+                case 0:
+                    break;
+                case 1:
+                    companyiaActual.afegirRutaTransoceanica();
+                    break;
+                case 2:
+                    int posicio = companyiaActual.seleccionarRutaTransoceanica();
+                    if(posicio != -1){
+                        companyiaActual.getRutesTransoceaniques()[posicio].modificarRutaTransoceanica();
+                    }
+                    break;
+                case 3:
+                    for (int i = 0; i < companyiaActual.getPosicioRutesTransoceaniques(); i++) {
+                        companyiaActual.getRutesTransoceaniques()[i].mostrarRutaTransoceanica();
+                    }
+                    break;
+                default:
+                    System.out.println("\nS'ha de seleccionar una opció correcta del menú.");
+                    break;
+            }
+        } while (opcio != 0);
     }
 
     /*
@@ -392,8 +458,41 @@ public class Aplicacio {
      no controlem que l'usuari introdueixi una opció numèrica, doncs això ho farem amb la
      tècnica de les excepcions que veurem més endavant
      */
-    public static void menuTcps() {
+    public static void menuTcps()throws ParseException {
+        int opcio = 0;
 
+        do {
+            int pos = -1;
+            System.out.println("\nSelecciona una opció");
+            System.out.println("\n0. Sortir");
+            System.out.println("\n1. Alta");
+            System.out.println("\n2. Modificar");
+            System.out.println("\n3. LListar TCP's");
+
+            opcio = DADES.nextInt();
+
+            switch (opcio) {
+                case 0:
+                    break;
+                case 1:
+                    companyiaActual.afegirTCP();
+                    break;
+                case 2:
+                    int posicio = companyiaActual.seleccionarTCP();
+                    if(posicio != -1){
+                        companyiaActual.getTcps()[posicio].modificarTCP();
+                    }
+                    break;
+                case 3:
+                    for (int i = 0; i < companyiaActual.getPosicioTcps(); i++) {
+                        companyiaActual.getTcps()[i].mostrarTCP();
+                    }
+                    break;
+                default:
+                    System.out.println("\nS'ha de seleccionar una opció correcta del menú.");
+                    break;
+            }
+        } while (opcio != 0);
     }
 
     /*
