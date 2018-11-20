@@ -642,27 +642,16 @@ public class Aplicacio {
                     }
                     break;
                 case 5:
-                    if (companyiaActual != null) {
-                        menuRutesIntercontinentals();
-                    } else {
-                        System.out.println("\nPrimer s'ha de seleccionar la companyia en el menú de companyes");
-                    }
+                    companyiaActual.afegirTripulantCabinaVol();                 
                     break;
                 case 6:
-                    if (companyiaActual != null) {
-                        menuRutesTransoceaniques();
-                    } else {
-                        System.out.println("\nPrimer s'ha de seleccionar la companyia en el menú de companyes");
-                    }
+                    companyiaActual.afegirTCPVol();  
                     break;
                 case 7:
-                    if (companyiaActual != null) {
-                        menuTripulantsCabina();
-                    } else {
-                        System.out.println("\nPrimer s'ha de seleccionar la companyia en el menú de companyes");
-                    }
+                    for (int i = 0; i < companyiaActual.getPosicioVols(); i++) {
+                        companyiaActual.getVol()[i].mostrarVol();
+                    } 
                     break;
-
                 default:
                     System.out.println("\nS'ha de seleccionar una opció correcta del menú.");
                     break;
