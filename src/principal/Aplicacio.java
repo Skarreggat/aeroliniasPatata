@@ -198,22 +198,19 @@ public class Aplicacio {
                     companyiaActual.afegirAvio();
                     break;
                 case 2:
-                        companyiaActual.seleccionarAvio();
-
+                        int posAvio=companyiaActual.seleccionarAvio();
+                        if(posAvio!=-1){
+                        companyiaActual.getAvions()[posAvio].modificarAvio();
+                        }else{
+                            System.out.println("Aquest avio no existeix!");
+                        }
                     break;
                 case 3:
-                    pos = selectCompanyia();
-                    if (pos >= 0) {
-                        companyies[pos].modificarCompanyia();
-                    } else {
-                        System.out.println("\nNo existeix aquesta companyia");
+                    for (int i = 0; i < companyiaActual.getPosicioAvions(); i++) {
+                        companyiaActual.getAvions()[i].mostrarAvio();
                     }
                     break;
-                case 4:
-                    for (int i = 0; i < posicioCompanyies; i++) {
-                        companyies[i].mostrarCompanyia();
-                    }
-                    break;
+                
                 default:
                     System.out.println("\nS'ha de seleccionar una opció correcta del menú.");
                     break;
