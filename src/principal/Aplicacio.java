@@ -598,7 +598,7 @@ public class Aplicacio {
      */
     public static void menuVols() throws ParseException {
         int opcio = 0;
-
+        int posicio;
         do {
             System.out.println("\nSelecciona una opció");
             System.out.println("\n0. Sortir");
@@ -617,27 +617,28 @@ public class Aplicacio {
                 case 0:
                     break;
                 case 1:
-                    menuCompaniyes();
+                    companyiaActual.afegirVol();
                     break;
                 case 2:
-                    if (companyiaActual != null) {
-                        menuAvions();
-                    } else {
-                        System.out.println("\nPrimer s'ha de seleccionar la companyia en el menú de companyes");
+                    posicio = companyiaActual.seleccionarVol();
+                    if(posicio != -1){
+                        companyiaActual.getVol()[posicio].modificarVol();
                     }
                     break;
                 case 3:
-                    if (companyiaActual != null) {
-                        menuRutesNacionals();
-                    } else {
-                        System.out.println("\nPrimer s'ha de seleccionar la companyia en el menú de companyes");
-                    }
+     
+                        companyiaActual.afegirAvioVol();
+                    
+                    
                     break;
                 case 4:
-                    if (companyiaActual != null) {
-                        menuRutesInternacionals();
-                    } else {
-                        System.out.println("\nPrimer s'ha de seleccionar la companyia en el menú de companyes");
+                    System.out.println("Quin tipus de ruta vols afegir??");
+                    System.out.println("1-ruta nacional\n2-ruta internacional\n3-ruta intercontinental\n4-ruta transocenàica");
+                    int num=DADES.nextInt();
+                    if(num>=1&&num<=4){
+                    companyiaActual.afegirRutaVol(num);
+                    }else{
+                        System.out.println("El tipus de ruta no és correcte");
                     }
                     break;
                 case 5:
