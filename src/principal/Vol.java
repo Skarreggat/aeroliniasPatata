@@ -210,10 +210,10 @@ public class Vol {
         LocalTime.of(horaA, minutA);
 
         System.out.println("Introdueix la data de sortida del vol:(dd-MM-yyyy)");
-        Date dataSortida = new SimpleDateFormat("hh:mm:ss a dd-MM-yyyy").parse(new Scanner(System.in).nextLine());
+        Date dataSortida = new SimpleDateFormat("dd-MM-yyyy").parse(new Scanner(System.in).nextLine());
 
         System.out.println("Introdueix la data d'arribada del vol:(dd-MM-yyyy)");
-        Date dataArribada = new SimpleDateFormat("hh:mm:ss a dd-MM-yyyy").parse(new Scanner(System.in).nextLine());
+        Date dataArribada = new SimpleDateFormat("dd-MM-yyyy").parse(new Scanner(System.in).nextLine());
 
         return new Vol(codi, LocalTime.of(horaS, minutS), LocalTime.of(horaA, minutA), dataSortida, dataArribada);
     }
