@@ -128,21 +128,21 @@ public class TripulantCabina {
     public static TripulantCabina nouTripulantCabina() {
 
         System.out.println("CREACIO DE NOU TRIPULANT\n");
-        System.out.println("Introdueix el Passaport: ");
+        System.out.println("Introdueix el nou Passaport: ");
         String pass = DADES.nextLine();
-        System.out.println("Introdueix el nom: ");
+        System.out.println("Introdueix el nou nom: ");
         String pNom = DADES.nextLine();
-        System.out.println("Introdueix l'edat: ");
+        System.out.println("Introdueix la nova edat: ");
         int pedat = DADES.nextInt();
 
-        System.out.println("Introdueix les Hores de vol: ");
+        System.out.println("Introdueix les noves Hores de vol: ");
         int hores = DADES.nextInt();
-        System.out.println("Introdueix els minuts de vol: ");
+        System.out.println("Introdueix els nous minuts de vol: ");
         int minuts = DADES.nextInt();
 
         DADES.nextLine();
 
-        System.out.println("Introdueix el rang(CP/C/EV): ");
+        System.out.println("Introdueix el nou rang(CP/C/EV): ");
         String Rang = DADES.next();
         String pRang = "";
         switch (Rang) {

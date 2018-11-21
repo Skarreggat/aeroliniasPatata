@@ -129,6 +129,7 @@ public class Aplicacio {
                 case 1:
                     companyies[posicioCompanyies] = Companyia.novaCompanyia();
                     posicioCompanyies++;
+                    
                     break;
                 case 2:
                     pos = selectCompanyia();
@@ -182,7 +183,7 @@ public class Aplicacio {
         int opcio = 0;
 
         do {
-            int pos = -1;
+            
             System.out.println("\nSelecciona una opció");
             System.out.println("\n0. Sortir");
             System.out.println("\n1. Alta");
@@ -243,7 +244,7 @@ public class Aplicacio {
         int opcio = 0;
 
         do {
-            int pos = -1;
+           
             System.out.println("\nSelecciona una opció");
             System.out.println("\n0. Sortir");
             System.out.println("\n1. Alta");
@@ -300,7 +301,7 @@ public class Aplicacio {
         int opcio = 0;
 
         do {
-            int pos = -1;
+            
             System.out.println("\nSelecciona una opció");
             System.out.println("\n0. Sortir");
             System.out.println("\n1. Alta");
@@ -358,7 +359,7 @@ public class Aplicacio {
          int opcio = 0;
 
         do {
-            int pos = -1;
+            
             System.out.println("\nSelecciona una opció");
             System.out.println("\n0. Sortir");
             System.out.println("\n1. Alta");
@@ -416,7 +417,7 @@ public class Aplicacio {
         int opcio = 0;
 
         do {
-            int pos = -1;
+            
             System.out.println("\nSelecciona una opció");
             System.out.println("\n0. Sortir");
             System.out.println("\n1. Alta");

@@ -571,16 +571,19 @@ public class Companyia {
      Retorn: cap
      */
     public void afegirAvioVol() {
-        Vol vol = vols[seleccionarVol()];
-        if (vol != null) {
-            Avio avio = avions[seleccionarAvio()];
-            if (avio != null) {
+        int pos = seleccionarVol();
+        if (pos != -1) {
+            Vol vol = vols[pos];
+            int poA = seleccionarAvio();
+            if (poA != -1) {
+                Avio avio = avions[poA];
                 vol.setAvio(avio);
+
             } else {
-                System.out.println("\nNo existeix aquest avió");
+                System.out.println("\nNo existeix aquest Avio");
             }
         } else {
-            System.out.println("\nNo existeix aquest vol");
+            System.out.println("el vol no existeix");
         }
     }
 
@@ -599,10 +602,12 @@ public class Companyia {
      Retorn: cap
      */
     public void afegirTripulantCabinaVol() {
-        Vol vol = vols[seleccionarVol()];
-        if (vol != null) {
-            TripulantCabina tc = tripulantsCabina[posicioTripulantsCabina];
-            if (tc != null) {
+        int pos = seleccionarVol();
+        if (pos != -1) {
+            Vol vol = vols[pos];
+            int poT = seleccionarTripulantCabina();
+            if (poT != -1) {
+                TripulantCabina tc = tripulantsCabina[poT];
                 vol.afegirTripulantCabina(tc);
             } else {
                 System.out.println("\nNo existeix aquest tripulant de cabina");
@@ -610,6 +615,7 @@ public class Companyia {
         } else {
             System.out.println("\nNo existeix aquest vol");
         }
+
     }
 
     /*
@@ -625,17 +631,20 @@ public class Companyia {
      Retorn: cap
      */
     public void afegirTCPVol() {
-        Vol vol = vols[seleccionarVol()];
-        if (vol != null) {
-            TripulantCabina tc = tripulantsCabina[posicioTripulantsCabina];
-            if (tc != null) {
-                vol.afegirTripulantCabina(tc);
+        int pos = seleccionarVol();
+        if (pos != -1) {
+            Vol vol = vols[pos];
+            int posT = seleccionarTCP();
+            if (posT != -1) {
+                TCP tcp = tcps[posT];
+                vol.afegirTCP(tcp);
             } else {
-                System.out.println("\nNo existeix aquest tripulant de cabina");
+                System.out.println("\nNo existeix aquest TCP");
             }
         } else {
             System.out.println("\nNo existeix aquest vol");
         }
+
     }
 
     /*
@@ -656,8 +665,9 @@ public class Companyia {
      Retorn: cap
      */
     public void afegirRutaVol(int tipus) {
-        Vol vol = vols[seleccionarVol()];
-        if (vol != null) {
+        int pos = seleccionarVol();
+        if (pos != -1) {
+            Vol vol = vols[pos];
             switch (tipus) {
                 case 1:
                     vol.setRuta(RutaNacional.novaRutaNacional());
@@ -675,6 +685,8 @@ public class Companyia {
                     System.out.println("\nNo existeix aquesta ruta");
             }
 
+        } else {
+            System.out.println("no existeix el vol");
         }
     }
 
