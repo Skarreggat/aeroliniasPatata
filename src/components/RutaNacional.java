@@ -95,6 +95,7 @@ public class RutaNacional {
         String aeroD = DADES.nextLine();
         System.out.println("Introdueix la Distancia: ");
         double dis = DADES.nextDouble();
+        DADES.nextLine();
         System.out.println("Introdueix el Pais: ");
         String paisP = DADES.nextLine();
 
@@ -124,7 +125,8 @@ public class RutaNacional {
         String aeroD = DADES.nextLine();
         System.out.println("Introdueix la Distancia: ");
         double dis = DADES.nextDouble();
-        System.out.println("Introdueix el Pai: ");
+        DADES.nextLine();
+        System.out.println("Introdueix el Pais: ");
         String paisP = DADES.nextLine();
         
         codi = nom;

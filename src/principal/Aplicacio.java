@@ -48,6 +48,7 @@ public class Aplicacio {
                     break;
                 case 2:
                     if (companyiaActual != null) {
+                        DADES.nextLine();
                         menuAvions();
                     } else {
                         System.out.println("\nPrimer s'ha de seleccionar la companyia en el menú de companyes");
@@ -55,6 +56,7 @@ public class Aplicacio {
                     break;
                 case 3:
                     if (companyiaActual != null) {
+                        DADES.nextLine();
                         menuRutesNacionals();
                     } else {
                         System.out.println("\nPrimer s'ha de seleccionar la companyia en el menú de companyes");
@@ -62,6 +64,7 @@ public class Aplicacio {
                     break;
                 case 4:
                     if (companyiaActual != null) {
+                        DADES.nextLine();
                         menuRutesInternacionals();
                     } else {
                         System.out.println("\nPrimer s'ha de seleccionar la companyia en el menú de companyes");
@@ -69,6 +72,7 @@ public class Aplicacio {
                     break;
                 case 5:
                     if (companyiaActual != null) {
+                        DADES.nextLine();
                         menuRutesIntercontinentals();
                     } else {
                         System.out.println("\nPrimer s'ha de seleccionar la companyia en el menú de companyes");
@@ -76,6 +80,7 @@ public class Aplicacio {
                     break;
                 case 6:
                     if (companyiaActual != null) {
+                        DADES.nextLine();
                         menuRutesTransoceaniques();
                     } else {
                         System.out.println("\nPrimer s'ha de seleccionar la companyia en el menú de companyes");
@@ -83,6 +88,7 @@ public class Aplicacio {
                     break;
                 case 7:
                     if (companyiaActual != null) {
+                        DADES.nextLine();
                         menuTripulantsCabina();
                     } else {
                         System.out.println("\nPrimer s'ha de seleccionar la companyia en el menú de companyes");
@@ -90,6 +96,7 @@ public class Aplicacio {
                     break;
                 case 8:
                     if (companyiaActual != null) {
+                        DADES.nextLine();
                         menuTcps();
                     } else {
                         System.out.println("\nPrimer s'ha de seleccionar la companyia en el menú de companyes");
@@ -97,6 +104,7 @@ public class Aplicacio {
                     break;
                 case 9:
                     if (companyiaActual != null) {
+                        DADES.nextLine();
                         menuVols();
                     } else {
                         System.out.println("\nPrimer s'ha de seleccionar la companyia en el menú de companyes");

@@ -111,9 +111,9 @@ public class TCP {
         String nom = DADES.nextLine();
         System.out.println("Introdueix l'edat del TCP: ");
         int ed = DADES.nextInt();
-        System.out.println("Introdueix les hores de vol del TCP: ");
+        System.out.println("Introdueix les hores de vol del TCP(0-23): ");
         int hores = DADES.nextInt();
-        System.out.println("Introdueix els minuts de vol del TCP: ");
+        System.out.println("Introdueix els minuts de vol del TCP(0-59): ");
         int minuts = DADES.nextInt();
         
         

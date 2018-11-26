@@ -139,6 +139,7 @@ public class TripulantCabina {
         int hores = DADES.nextInt();
         System.out.println("Introdueix els nous minuts de vol: ");
         int minuts = DADES.nextInt();
+        
 
         DADES.nextLine();
 

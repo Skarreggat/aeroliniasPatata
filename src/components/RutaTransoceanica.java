@@ -128,8 +128,8 @@ public class RutaTransoceanica {
      */
     public static RutaTransoceanica novaRutaTransoceanica() {
 
-        System.out.println("CREACIO DE LA RUTA INTERNACIONAL!");
-        System.out.println("Digam el codi de la ruta Internacional: ");
+        System.out.println("CREACIO DE LA RUTA TRANOCEANICA!");
+        System.out.println("Digam el codi de la ruta transoceanica: ");
         String nom = DADES.nextLine();
         System.out.println("Digam el Aeroport d'origen: ");
         String aeroO = DADES.nextLine();
@@ -166,9 +166,9 @@ public class RutaTransoceanica {
         System.out.println("DADES ACTUALS A MODIFICAR: \n");
         mostrarRutaTransoceanica();
         System.out.println("");
-        System.out.println("CREACIO DE LA RUTA INTERNACIONAL!");
+        System.out.println("MODIFICACIO DE LA RUTA TRANSOCEANICA!");
 
-        System.out.println("Digam el codi de la ruta Internacional: ");
+        System.out.println("Digam el codi de la ruta Transoceanica: ");
         codi = DADES.nextLine();
         System.out.println("Digam el Aeroport d'origen: ");
         aeroportOri = DADES.nextLine();
