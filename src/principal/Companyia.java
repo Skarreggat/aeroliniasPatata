@@ -670,7 +670,7 @@ public class Companyia {
             Vol vol = vols[pos];
             switch (tipus) {
                 case 1:
-                    vol.setRuta(RutaNacional.novaRutaNacional());
+                    vol.setRuta(rutesNacionals[seleccionarRutaNacional()]);
                     break;
                 case 2:
                     vol.setRuta(RutaInternacional.novaRutaInternacional());
